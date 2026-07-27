@@ -102,10 +102,8 @@ Deploy a dedicated Debian Router virtual machine responsible for:
 
 - routing 
 
-- firewalling 
-
-2 
-
+- firewalling
+  
 - NAT 
 
 - future VPN services 
@@ -151,9 +149,7 @@ atlas.lab
 ## **Rationale** 
 
 The namespace reflects the fictional company and remains isolated from public DNS. 
-
-3 
-
+ 
 ## **Alternatives Considered** 
 
 company.lab 
@@ -194,8 +190,6 @@ srv-web-01
 
 srv-ca-01 
 
-4 
-
 srv-git-01 srv-monitor-01 Workstations: 
 
 cli-admin-01 cli-dev-01 Network devices: rtr-edge-01 Future switches: 
@@ -229,8 +223,6 @@ IP addresses are reserved by functional ranges.
 Infrastructure 
 
 10–19 
-
-5 
 
 Network Services 
 
@@ -273,9 +265,7 @@ Each major infrastructure service represents an independent responsibility.
 ## **Decision** 
 
 Every major service receives its own virtual machine. 
-
-6 
-
+ 
 ## **Rationale** 
 
 Isolation simplifies troubleshooting, documentation and future migration. 
@@ -316,8 +306,6 @@ Ubuntu Desktop will be used as the primary administrative workstation.
 
 This reflects common enterprise environments and broadens operational experience without introducing unnecessary complexity. 
 
-7 
-
 ## **Consequences** 
 
 The learner gains practical familiarity with both Debian-based distributions while recognizing that core Linux administration principles remain consistent. 
@@ -357,8 +345,6 @@ Accepted
 Local Linux accounts are used initially. 
 
 Centralized identity management will be introduced only when business growth requires it. 
-
-8 
 
 ## **Rationale** 
 
