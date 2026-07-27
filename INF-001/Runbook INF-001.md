@@ -2,11 +2,11 @@
 
 **Engineering Task:** INF-001 
 
-**Version:** 1.0 
+**Version:** 1.1 
 
 **Status:** Approved
 
-**Last Updated:** 2026-07-16 
+**Last Updated:** 2026-07-27 
 
 **Verified By:** George
 
@@ -128,12 +128,35 @@ ubuntu-26.04-desktop-amd64
 
 ## **9. Configuration Changes** 
 
-Remove unnecessary services: CUPS
-sudo systemctl stop cups.service cups.socket
-sudo systemctl disable cups.service cups.socket
-sudo systemctl stop cups-browsed.service
-sudo systemctl disable cups-browsed.service
-ss -tlnp (to verify no open port on :631)
+### Remove unnecessary services: CUPS
+- sudo systemctl stop cups.service cups.socket
+- sudo systemctl disable cups.service cups.socket
+- sudo systemctl stop cups-browsed.service
+- sudo systemctl disable cups-browsed.service
+- ss -tlnp (to verify no open port on :631)
+
+### Repository Access Setup:
+
+**Generate public and private SSH keys inside ~/.ssh directory:**
+- ssh-keygen -t ed25519 -C "your.email@example.com" (add passphrase protection)
+- chmod 700 ~/.ssh
+- chmod 600 ~/.ssh/id_ed25519 
+- chmod 644 ~/.ssh/id_ed25519.pub
+
+**Add public SSH key on GitHub:**
+- Manually add the public SSH key (cli-admin-01)
+- Paste the entire content of .ssh/id_ed25519.pub into the cli-admin-01 (SSH key)
+
+**Test Git repository access:**
+- ssh -T git@github.com
+
+**Git identify configuration:**
+- git config --global user.name "username"
+- git config --global user.email "email"
+
+**Clone the Infrastructure Repository:**
+- git clone git@github.com:OWNER/REPO.git
+
 
 ## **10. Validation Steps** 
 
@@ -148,6 +171,7 @@ ss -tlnp (to verify no open port on :631)
 | Software | code --version | VS Code version string displayed |
 | Ports | ss -tlnp | NO :22 :631 ports opened |
 | Encryption| lsblk | dm_crypt-0 |
+| Repository access | ssh -T git@github.com | Message "You have successfully authenticated" |
 
 
 ## **11. Snapshot Strategy** 
@@ -194,6 +218,7 @@ Rebuild a new VM following the current Runbook. Restore documentation/configurat
 | Version | Date | Description |
 |---|---|---|
 | 1.0 | 2026-07-16 | Initial version |
+| 1.1 | 2026-07-27 | Added SSH key generation, GitHub authentication, repository clone, and Git identity configuration to support commiting from cli-admin-01 |
 
 ## **17. Troubleshooting**
 

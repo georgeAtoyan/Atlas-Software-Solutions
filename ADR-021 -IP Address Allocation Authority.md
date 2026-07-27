@@ -1,8 +1,11 @@
 # ADR-021 — Establish Infrastructure Architecture §8 as the Single Authoritative IP Address Allocation Policy
 
 **Status:** Accepted
-**Date:** 2026-07-13
-**Author:** Infrastructure Engineer
+
+**Date:** 2026-07-16
+
+**Author:** george
+
 **Reviewer:** Technical Lead
 
 ---

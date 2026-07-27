@@ -36,6 +36,7 @@ These records are **grandfathered as historical records**:
 ### 0.4 Identifier Allocation
 
 ADR identifiers are permanent and never reused (STD-ADR-001 §6.1). Identifiers ADR-001 through ADR-020 are consumed by this document. **All identifier allocation is performed exclusively through the ADR Register (ADR-REGISTER.md)**, which records every allocated number, every status, and the next available identifier. Do not derive the next number by inspecting this document or the repository. In any discrepancy, the ADR Register prevails.
+
 ## **ADR-001** 
 
 ## **Title** 
@@ -55,8 +56,6 @@ A single flat network would eventually require significant redesign.
 ## **Decision** 
 
 The infrastructure will be divided into multiple logical network segments from the beginning. 
-
-1 
 
 Initial segments include: 
 
@@ -386,7 +385,6 @@ Maintain a dedicated Infrastructure Repository alongside separate repositories f
 
 Separating infrastructure from application code reflects professional engineering practice and keeps responsibilities clear. 
 
-9 
 
 ## **ADR-012** 
 
@@ -432,8 +430,6 @@ draw.io is the primary tool for infrastructure diagrams.
 
 Mermaid diagrams may be used for lightweight documentation within Markdown. 
 
-10 
-
 ## **Rationale** 
 
 draw.io provides flexibility for detailed architecture diagrams, while Mermaid integrates well with repository documentation. 
@@ -474,8 +470,6 @@ Native system logging is used initially.
 
 Centralized logging will be introduced as infrastructure complexity increases. 
 
-11 
-
 ## **Rationale** 
 
 The learner should first understand local log analysis before adopting centralized logging platforms. 
@@ -515,8 +509,6 @@ Accepted
 Security controls are integrated into every engineering task from the beginning. 
 
 Examples include least privilege, SSH hardening, firewall configuration, certificate management and secure service configuration. 
-
-12 
 
 ## **Rationale** 
 
@@ -560,8 +552,6 @@ Cloud technologies will be introduced after the learner demonstrates confidence 
 
 AWS will serve as the primary cloud platform for future phases. 
 
-13 
-
 ## **Rationale** 
 
 Strong infrastructure fundamentals transfer naturally to cloud environments. 
@@ -604,13 +594,9 @@ Architectural history is considered valuable engineering knowledge.
 
 A well-designed infrastructure is not the result of installing many technologies. 
 
-14 
-
 It is the result of making a series of deliberate, documented and well-reasoned engineering decisions. 
 
 This ADR establishes the architectural foundation upon which every future Engineering Task in the Atlas Software Solutions project will be built. 
-
-15 
 
 
 ## **Chapter 8A Change History**
