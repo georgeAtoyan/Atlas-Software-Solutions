@@ -39,7 +39,7 @@ The documentation is authored and committed from 'cli-admin-01' via SSH-authenti
 - Git configuration and credentials are split between host and administrative workstation
 
 **Reason for Rejection**
-Non-compliant with the approved governance model.
+- Non-compliant with the approved governance model.
 
 ## 5. Rationale
 
@@ -82,7 +82,8 @@ Documentation-only change. One documents is touched: this ADR (created). No infr
 
 ## 9. Related Documents
 
-- Runbook INF-001 
+- Runbook INF-001
+- 08A - Infrastructure Decision Record (ADR-007, ADR-011) 
 
 
 ## 10. Review History
