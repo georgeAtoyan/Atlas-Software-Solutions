@@ -209,9 +209,9 @@ Rebuild a new VM following the current Runbook. Restore documentation/configurat
 
 ## **15. References** 
 
-• README - INF-001
-• Verification Notes - INF-001
-• Lessons Learned - INF-001
+- README - INF-001
+- Verification Notes - INF-001
+- Lessons Learned - INF-001
 
 ## **16. Change History** 
 
