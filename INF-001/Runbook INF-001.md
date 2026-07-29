@@ -115,9 +115,9 @@ ubuntu-26.04-desktop-amd64
 - update packages: sudo apt update 
 - verify hostname: hostname
 - remove unnecessary services: CUPS 
-- install packages: 
-	• dpkg -l git (not installed), sudo apt install git, git -v
-        • dpkg -l openssh-client (not installed), sudo apt install openssh-client, ssh -V 
+- install packages:
+	- dpkg -l git (not installed), sudo apt install git, git -v
+ 	- dpkg -l openssh-client (not installed), sudo apt install openssh-client, ssh -V 
 
 ## **8. Software Installation** 
 
