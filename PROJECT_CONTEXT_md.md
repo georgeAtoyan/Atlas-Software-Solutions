@@ -1,11 +1,14 @@
-
-
 PROJECT_CONTEXT.md
 ## Atlas Software Solutions
-## Project Context
-## Version: 0.1
-## Status: Active Development
-## Last Updated: July 2026
+
+Project Context
+
+Version: 0.3
+
+Status: Active Development
+
+Last Updated: 29 July 2026
+
 ## Purpose
 This document provides the current operational context of the Atlas Software Solutions Engineering
 ## Blueprint.
@@ -78,31 +81,41 @@ avoid solving problems immediately;
 teach professional engineering thinking.
 The Technical Lead should behave as a senior infrastructure engineer mentoring a junior team member.
 ## Current Infrastructure Status
-## Infrastructure State:
-## Planning Phase
-## Current Architecture:
-## Designed
-## Infrastructure Deployment:
-## Not Started
-## Engineering Documentation:
-## Established
-## Engineering Standards:
-## Established
-## Engineering Workflow:
-## Established
-## Implementation Status:
-Awaiting first Engineering Task.
-## Current Engineering Phase
-## Phase:
-## Linux Foundations
-## Status:
-## •
-## 3
 
-Ready to Begin
-## Current Priority:
-Begin INF-001.
-No engineering tasks have been completed yet.
+### Infrastructure State:
+Planning Phase
+
+### Current Architecture:
+Designed
+
+### Infrastructure Deployment:
+In Progress
+
+### Engineering Documentation:
+Established
+
+### Engineering Standards: 
+Established
+
+### Engineering Workflow:
+Established
+
+## Implementation Status:
+INF-001 (Administrative Workstation) complete. Next task: INF-002
+
+## Current Engineering Phase
+
+### Phase:
+Linux Foundations
+
+### Status:
+In Progress
+
+### Current Priority:
+- Begin INF-002 - Deploy Debian Router.
+- INF-001 completed and formally closed.
+
+
 ## Infrastructure Overview
 ## Infrastructure Name:
 ## Atlas Software Solutions
@@ -124,8 +137,11 @@ PowerShell
 ## 4
 
 ## Markdown
+
 ## Current Architecture Decisions
-The following architectural decisions have been approved.
+The foundational architecture decisions are recorded as ADR-001 - ADR-020 (Chapter 8A). Subsequent decisions (ADR-021 onward) extend these. The ADR Register (ADR-REGISTER.md) is the authoritative, current index of all Architecture Decision Records. 
+
+
 ## Network Architecture:
 Multiple network segments.
 ## Internal Domain:
@@ -148,7 +164,7 @@ Ubuntu Desktop for administrative workstation.
 ## 5
 
 ## Incremental.
-These decisions are documented in the Foundational Architecture Decisions, ADR-001–ADR-020 (Chapter 8A). The authoritative index of all ADRs is the ADR Register (ADR-REGISTER.md).
+These decisions are documented in the ADRs, ADR-001–ADR-023 (Chapter 8A). The authoritative index of all ADRs is the ADR Register (ADR-REGISTER.md).
 ## Infrastructure Standards
 Current standards include:
 ## Engineering Principles
@@ -158,35 +174,31 @@ Engineering Task Specification (ETS)
 ## Architecture Decision Records (Foundational: Chapter 8A; Standard: STD-ADR-001; Index: ADR Register)
 ## Engineering Backlog
 All future Engineering Tasks must comply with these documents.
+
 ## Current Repository Structure
-The Engineering Blueprint repository currently contains:
-## Engineering Handbook
-## Architecture
-## Engineering Standards
-## Engineering Roadmap
-## Engineering Tasks
-## Runbooks
-## Templates
-The Engineering Tasks directory is currently empty.
-## 6
+The Engineering Tasks directory contains INF-001 (closed): README, Runbook, Verification Notes, Lessons Learned, Architecture Diagram, Design Proposal. 
 
 ## Current Engineering Backlog
-## Next Engineering Task:
-## INF-001
-## Build Administrative Workstation
-## Status:
-## Ready
+
+### Previous Engineering Task:
+INF-001 - Build Administrative Workstation
+
+### Status:
+Done (closed)
+
+---
+
+### Next Engineering Task:
+INF-002 - Deploy Debian Router
+
+### Status:
+Ready
+
 Subsequent tasks include:
-## INF-002
-## Deploy Debian Router
-## NET-001
-## Configure Internal Networks
-## NET-002
-Routing & NAT
-## NET-003
-## Packet Flow Validation
-## NET-004
-Primary DNS
+## NET-001 - Configure Internal Networks
+## NET-002 - Routing & NAT
+## NET-003 - Packet Flow Validation
+## NET-004 - Primary DNS
 Engineering Tasks should be completed according to dependency order.
 ## Documentation Status
 ## Completed Documents:
@@ -220,23 +232,7 @@ Virtual Machines are created as needed.
 Normally, no more than three or four virtual machines are expected to run simultaneously.
 Engineering Tasks should respect these practical hardware constraints while preserving realistic
 infrastructure architecture.
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## 8
+
 
 ## Learning Approach
 The learner prefers:
@@ -261,36 +257,20 @@ skip prerequisite knowledge;
 provide unnecessary complexity;
 introduce technologies prematurely;
 optimize for speed instead of understanding.
+
 ## Current Objectives
+
 ## Immediate Objectives:
-Begin Engineering Task INF-001.
-Build the administrative workstation.
-Establish the first operational infrastructure environment.
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## 1.
-## 2.
-## 3.
-## 9
+
+- Begin INF-002
+- Deploy the Debian router (rtr-edge-01) as gateway for Management LAN
+- Establish routing between internal network and internet
 
 Begin practical Linux administration.
 Long-Term Objective:
 Design, build and operate a professional Linux infrastructure that demonstrates the technical and
 engineering competencies expected from a Junior Linux System Administrator.
+
 ## Operational Status
 ## Blueprint:
 ## Established
@@ -302,16 +282,18 @@ engineering competencies expected from a Junior Linux System Administrator.
 ## Established
 ## Technical Lead Guidance:
 ## Established
+
 ## Infrastructure:
-## Not Yet Built
+First workstation operational (cli-admin-01); network layer pending INF-002.
+
 ## Current Project Status:
-Ready to Begin Engineering Work.
-## 4.
-## 10
+Engineering in progress; INF-001 closed.
+
 
 ## Change History
 
 |Version|Date|Description|
 |---|---|---|
-|0.1|July 2026|Initial version|
-|0.2|2026-07-13|ADR references corrected per AUD-C-04 ("ADR-000"/"Infrastructure Decision Record" retired). Targeted correction only; broader content staleness (AUD-M-01) remains open under DOC-010.|
+| 0.1 | July 2026 | Initial version |
+| 0.2 | 2026-07-13 | ADR references corrected per AUD-C-04 ("ADR-000"/"Infrastructure Decision Record" retired). Targeted correction only; broader content staleness (AUD-M-01) remains open under DOC-010. |
+| 0.3 | 2026-07-29 | Updated task status, phase, backlog, objectives and operational status to reflect formal closure of INF-001. ADR reference range updated for ADR-021-023. Broader staleness (AUD-M-01) remains open.

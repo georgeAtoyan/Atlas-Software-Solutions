@@ -40,17 +40,13 @@ Examples:
 
 Correct: 
 
-1 
-
-The company now has multiple servers. 
-
-User management has become difficult. 
-
-Introduce LDAP. 
+- The company now has multiple servers. 
+- User management has become difficult. 
+- Introduce LDAP. 
 
 Incorrect: 
 
-Install LDAP because every infrastructure should have one. 
+- Install LDAP because every infrastructure should have one. 
 
 Every technology must solve an existing problem. 
 
@@ -61,13 +57,9 @@ The simplest solution that satisfies current requirements is usually the best so
 Avoid introducing unnecessary: 
 
 - servers; 
-
 - services; 
-
 - dependencies; 
-
 - automation; 
-
 - abstraction. 
 
 Complexity should only appear when simpler solutions are no longer sufficient. 
@@ -83,15 +75,9 @@ Before introducing automation, be able to perform the task manually.
 Examples include: 
 
 - creating users; 
-
 - configuring DNS; 
-
 - issuing certificates; 
-
 - deploying services; 
-
-2 
-
 - troubleshooting failures. 
 
 Automation is introduced only after the underlying process is understood. 
@@ -103,15 +89,10 @@ A service without documentation is an incomplete implementation.
 Documentation must answer questions that another engineer would ask: 
 
 - What does this service do? 
-
 - Why does it exist? 
-
 - How is it configured? 
-
 - How is it verified? 
-
 - How is it restored? 
-
 - How is it troubleshooted? 
 
 The implementation is not finished until the documentation is complete. 

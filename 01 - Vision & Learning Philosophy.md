@@ -50,34 +50,28 @@ Every technology must solve an actual engineering problem.
 
 Examples: 
 
-Instead of: 
+1. Instead of: Learn DNS.
 
-Learn DNS. 
+   The project asks: How can users access servers by names instead of IP addresses? 
 
-The project asks: 
+2. Instead of: Learn LDAP. 
 
-How can users access servers by names instead of IP addresses? 
+   The project asks: How can user management scale beyond local Linux accounts? 
 
-Instead of: 
+3. Instead of: Learn PKI. 
 
-Learn LDAP. 
+   The project asks: How can internal services communicate securely using trusted certificates? 
 
-The project asks: 
-
-How can user management scale beyond local Linux accounts? 
-
-Instead of: 
-
-Learn PKI. 
-
-The project asks: 
-
-How can internal services communicate securely using trusted certificates? 
+---
 
 Technology is always introduced as the answer to a real problem. 
 
 Never as an isolated topic. 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a53b769 (minor edits applied)
 ## **1.4 Engineering Before DevOps** 
 
 The purpose of the first project is **not** becoming a DevOps Engineer. 
@@ -114,9 +108,13 @@ Every major technology introduced during this project must be understood on thre
 
 What problem does this technology solve? 
 
+<<<<<<< HEAD
 Example: 
 
 DNS allows systems to locate services using names instead of IP addresses. 
+=======
+Example: DNS allows systems to locate services using names instead of IP addresses. 
+>>>>>>> a53b769 (minor edits applied)
 
 ## **Level 2 — Internal Operation** 
 
@@ -125,15 +123,11 @@ How does it actually work?
 Examples include: 
 
 - protocols 
-
-- processes • configuration 
-
+- processes
+- configuration 
 - communication 
-
 - authentication 
-
 - storage 
-
 - troubleshooting 
 
 Understanding internal operation is mandatory. 
@@ -144,13 +138,10 @@ Why is this technology part of the infrastructure?
 
 Questions that should always be answerable: 
 
-Why is it needed? 
-
-What depends on it? 
-
-What would happen if it disappeared? 
-
-What alternatives exist? 
+- Why is it needed? 
+- What depends on it? 
+- What would happen if it disappeared? 
+- What alternatives exist? 
 
 Only after all three levels are understood is a technology considered learned. 
 
@@ -230,4 +221,8 @@ We do not study technologies.
 
 We solve engineering problems. 
 
+<<<<<<< HEAD
 Technology is simply the tool selected to solve them.  
+=======
+Technology is simply the tool selected to solve them. 
+>>>>>>> a53b769 (minor edits applied)
