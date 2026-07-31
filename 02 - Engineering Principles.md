@@ -103,23 +103,16 @@ No architectural decision should rely on habit or popularity.
 
 Every major choice must answer: 
 
-Why this solution? 
-
-Why not another one? 
-
-What trade-offs were accepted? 
+1. Why this solution? 
+2. Why not another one? 
+3. What trade-offs were accepted? 
 
 Examples: 
-
-Why BIND instead of dnsmasq? 
-
-Why Nginx instead of Apache? 
-
-Why local storage instead of NFS? 
+- Why BIND instead of dnsmasq? 
+- Why Nginx instead of Apache? 
+- Why local storage instead of NFS? 
 
 Engineering is the process of making informed trade-offs. 
-
-3 
 
 ## **Principle 7 — Security Is Built In** 
 
@@ -130,18 +123,13 @@ Every service must be designed with security in mind from the beginning.
 Examples include: 
 
 - least privilege; 
-
 - secure authentication; 
-
 - encrypted communication; 
-
 - controlled access; 
-
 - proper permissions; 
-
 - audit logging. 
 
-Security is considered during design—not after deployment. 
+Security is considered during design — not after deployment. 
 
 ## **Principle 8 — Every Service Becomes Someone Else's Dependency** 
 
@@ -151,21 +139,16 @@ Every new component eventually becomes part of a larger system.
 
 Examples: 
 
-DNS supports LDAP. 
-
-LDAP supports authentication. 
-
-Certificates support HTTPS. 
-
-Monitoring supports operations. 
+- DNS supports LDAP. 
+- LDAP supports authentication. 
+- Certificates support HTTPS. 
+- Monitoring supports operations. 
 
 Before deploying any service, understand: 
 
-Who depends on this? 
+1. Who depends on this? 
+2. What breaks if it fails? 
 
-What breaks if it fails? 
-
-4 
 
 ## **Principle 9 — Troubleshooting Is a Core Skill** 
 
@@ -175,17 +158,12 @@ Every engineer must know how to investigate failures.
 
 Troubleshooting follows a structured process: 
 
-Observe. 
-
-Collect evidence. 
-
-Form hypotheses. 
-
-Test hypotheses. 
-
-Confirm root cause. 
-
-Apply the smallest effective fix. 
+- Observe. 
+- Collect evidence. 
+- Form hypotheses. 
+- Test hypotheses. 
+- Confirm root cause. 
+- Apply the smallest effective fix. 
 
 Guessing is not troubleshooting. 
 
@@ -199,17 +177,13 @@ Examples:
 
 After configuring DNS: 
 
-Perform queries. 
-
-Check authoritative answers. 
-
-Inspect logs. 
-
-Validate zone transfers. 
+- Perform queries. 
+- Check authoritative answers. 
+- Inspect logs. 
+- Validate zone transfers. 
 
 Every completed laboratory ends with objective verification. 
-
-5 
+ 
 
 ## **Principle 11 — Reproducibility Matters** 
 
@@ -218,11 +192,8 @@ Any engineer should be able to recreate the infrastructure using the documentati
 Configurations should be: 
 
 - repeatable; 
-
 - predictable; 
-
 - documented; 
-
 - version controlled. 
 
 Reproducibility is one of the foundations of professional infrastructure engineering. 
@@ -233,11 +204,9 @@ Mistakes are expected.
 
 Every failure should answer three questions: 
 
-What happened? 
-
-Why did it happen? 
-
-How can it be prevented? 
+1. What happened? 
+2. Why did it happen? 
+3. How can it be prevented? 
 
 Failures become permanent knowledge only after root cause analysis. 
 
@@ -251,19 +220,12 @@ Every change should be evaluated from the perspective of the whole environment.
 
 Questions to ask: 
 
-Does this affect networking? 
-
-Authentication? 
-
-6 
-
-Certificates? 
-
-Monitoring? 
-
-Backups? 
-
-Security? 
+1. Does this affect networking? 
+2. Authentication? 
+3. Certificates? 
+4. Monitoring? 
+5. Backups? 
+6. Security? 
 
 Never optimize one server while ignoring the system. 
 
@@ -283,13 +245,10 @@ Curiosity is one of the most valuable engineering skills.
 
 For every technology introduced during this project, continuously ask: 
 
-Why does it exist? 
-
-Why was it designed this way? 
-
-Why is this configuration recommended? 
-
-Why is one approach better than another? 
+1. Why does it exist? 
+2. Why was it designed this way? 
+3. Why is this configuration recommended? 
+4. Why is one approach better than another? 
 
 Engineering begins where memorization ends. 
 
@@ -297,28 +256,20 @@ Engineering begins where memorization ends.
 
 Throughout this project the following commitments apply. 
 
-7 
-
 The learner commits to: 
 
 - prioritizing understanding over speed; 
-
 - documenting all work; 
-
 - questioning assumptions; 
-
-- practicing deliberately; • accepting mistakes as part of learning. 
+- practicing deliberately;
+- accepting mistakes as part of learning. 
 
 The technical mentor commits to: 
 
 - explaining concepts before implementation; 
-
 - challenging architectural decisions constructively; 
-
 - encouraging independent reasoning; 
-
 - avoiding unnecessary complexity; 
-
 - introducing technologies only when they become justified. 
 
 These commitments define how the project will be conducted. 
@@ -334,6 +285,3 @@ A good engineer can learn a new tool.
 A good engineer cannot compensate for weak fundamentals. 
 
 Therefore, this project is built around principles first, technologies second. 
-
-8 
-

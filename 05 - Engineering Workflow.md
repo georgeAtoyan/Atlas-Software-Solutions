@@ -82,13 +82,10 @@ Every engineering task begins with a business requirement.
 
 Examples: 
 
-Developers need an internal Git server. 
-
-Internal websites require HTTPS. 
-
-User management has become difficult. 
-
-Deployments consume too much time. 
+- Developers need an internal Git server. 
+- Internal websites require HTTPS. 
+- User management has become difficult. 
+- Deployments consume too much time. 
 
 The business requirement defines the problem. 
 
@@ -101,18 +98,12 @@ The learner must first understand the problem.
 Questions include: 
 
 - What is happening? 
-
 - Why is it becoming a problem? 
-
 - Who is affected? 
-
 - What are the operational risks? 
-
 - What happens if nothing changes? 
 
 No solutions should be proposed until the problem is fully understood. 
-
-2 
 
 ## **5.5 Stage 3 — Infrastructure Assessment** 
 
@@ -121,11 +112,8 @@ The current environment is analyzed.
 Questions include: 
 
 - Which systems are involved? 
-
 - Which services already exist? 
-
 - What dependencies must be considered? 
-
 - Which components may be affected? 
 
 Engineering decisions must always consider the entire infrastructure. 
@@ -136,15 +124,11 @@ Only after understanding the problem does formal learning begin.
 
 This stage includes: 
 
-Reading the required chapters from the Linux Administration Handbook. 
-
-Studying protocols. 
-
-Reviewing architecture diagrams. 
-
-Understanding terminology. 
-
-Learning how the technology operates internally. 
+- Reading the required chapters from the Linux Administration Handbook. 
+- Studying protocols. 
+- Reviewing architecture diagrams. 
+- Understanding terminology. 
+- Learning how the technology operates internally. 
 
 Theory is always connected to an active engineering problem. 
 
@@ -156,19 +140,12 @@ The Technical Lead begins asking questions.
 
 Examples: 
 
-Which categories of solutions exist? 
-
-3 
-
-What are the advantages of each? 
-
-What assumptions are being made? 
-
-What dependencies will be introduced? 
-
-What security concerns exist? 
-
-What would happen if this service becomes unavailable? 
+1. Which categories of solutions exist? 
+2. What are the advantages of each? 
+3. What assumptions are being made? 
+4. What dependencies will be introduced? 
+5. What security concerns exist? 
+6. What would happen if this service becomes unavailable? 
 
 The objective is reasoning—not correctness. 
 
@@ -182,29 +159,18 @@ The learner prepares an engineering proposal.
 
 The proposal should include: 
 
-Objective 
-
-Problem Statement 
-
-Requirements 
-
-Proposed Architecture 
-
-Alternative Solutions 
-
-Advantages 
-
-Disadvantages 
-
-Risks 
-
-Verification Plan 
-
-Documentation Plan 
+- Objective 
+- Problem Statement 
+- Requirements 
+- Proposed Architecture 
+- Alternative Solutions 
+- Advantages 
+- Disadvantages 
+- Risks 
+- Verification Plan 
+- Documentation Plan 
 
 The proposal does not need to be perfect. 
-
-4 
 
 Its purpose is developing engineering thinking. 
 
@@ -214,25 +180,19 @@ The Technical Lead reviews the proposal.
 
 Possible outcomes include: 
 
-Approved. 
-
-Approved with recommendations. 
-
-Requires redesign. 
+- Approved. 
+- Approved with recommendations. 
+- Requires redesign. 
 
 The review focuses on engineering quality rather than implementation details. 
 
 Questions may include: 
 
-Can this design be simplified? 
-
-Is every component necessary? 
-
-Does the design introduce unnecessary complexity? 
-
-Is security considered? 
-
-Is documentation sufficient? 
+1. Can this design be simplified? 
+2. Is every component necessary? 
+3. Does the design introduce unnecessary complexity? 
+4. Is security considered? 
+5. Is documentation sufficient? 
 
 Only after approval does implementation begin. 
 
@@ -242,17 +202,11 @@ Implementation follows the approved design.
 
 The learner performs: 
 
-Installation. 
-
-Configuration. 
-
-Testing. 
-
-5 
-
-Troubleshooting. 
-
-Incremental verification. 
+- Installation. 
+- Configuration. 
+- Testing. 
+- Troubleshooting. 
+- Incremental verification. 
 
 No configuration should be copied without understanding its purpose. 
 
@@ -264,17 +218,13 @@ Verification is mandatory.
 
 The learner confirms: 
 
-The service functions correctly. 
+- The service functions correctly. 
+- Dependencies remain operational. 
+- Logs contain no unexpected errors. 
+- Security requirements are satisfied. 
+- The failure scenario has been considered. 
 
-Dependencies remain operational. 
-
-Logs contain no unexpected errors. 
-
-Security requirements are satisfied. 
-
-The failure scenario has been considered. 
-
-Verification is based on evidence—not assumptions. 
+Verification is based on evidence — not assumptions. 
 
 ## **5.12 Stage 10 — Documentation** 
 
@@ -282,25 +232,15 @@ Documentation is created immediately after implementation.
 
 Every service should include: 
 
-Purpose 
-
-Architecture 
-
-Configuration 
-
-Network Information 
-
-Dependencies 
-
-6 
-
-Verification Procedure 
-
-Troubleshooting 
-
-Lessons Learned 
-
-Future Improvements 
+- Purpose 
+- Architecture 
+- Configuration 
+- Network Information 
+- Dependencies 
+- Verification Procedure 
+- Troubleshooting 
+- Lessons Learned 
+- Future Improvements 
 
 Documentation should allow another engineer to understand the system without verbal explanation. 
 
@@ -310,17 +250,12 @@ Every completed project ends with an engineering review.
 
 Questions include: 
 
-Was the original problem solved? 
-
-Was the selected solution appropriate? 
-
-Could the implementation be simplified? 
-
-Which new dependencies appeared? 
-
-Which operational risks remain? 
-
-Would this design still work if the company doubled in size? 
+1. Was the original problem solved? 
+2. Was the selected solution appropriate? 
+3. Could the implementation be simplified? 
+4. Which new dependencies appeared? 
+5. Which operational risks remain? 
+6. Would this design still work if the company doubled in size? 
 
 Reflection transforms experience into engineering knowledge. 
 
@@ -329,23 +264,13 @@ Reflection transforms experience into engineering knowledge.
 The Technical Lead follows the same mentoring procedure throughout the project. 
 
 1. Present the business problem. 
-
 2. Confirm the learner understands the problem. 
-
 3. Recommend theory only when necessary. 
-
 4. Encourage independent analysis. 
-
-7 
-
 5. Challenge assumptions. 
-
 6. Review proposed architecture. 
-
 7. Approve implementation. 
-
 8. Review documentation. 
-
 9. Conduct post-implementation discussion. 
 
 The Technical Lead should gradually reduce guidance as the learner gains experience. 
@@ -354,23 +279,15 @@ The Technical Lead should gradually reduce guidance as the learner gains experie
 
 For every engineering task the learner should: 
 
-Understand the business need. 
-
-Analyze the current infrastructure. 
-
-Study the required concepts. 
-
-Design a solution. 
-
-Discuss architecture. 
-
-Implement carefully. 
-
-Verify objectively. 
-
-Document professionally. 
-
-Review critically. 
+- Understand the business need. 
+- Analyze the current infrastructure. 
+- Study the required concepts. 
+- Design a solution. 
+- Discuss architecture. 
+- Implement carefully. 
+- Verify objectively. 
+- Document professionally. 
+- Review critically. 
 
 Learning occurs through repetition of this process. 
 
@@ -379,8 +296,6 @@ Learning occurs through repetition of this process.
 An engineering task is considered complete only when: 
 
 ✓ The business requirement has been satisfied. 
-
-8 
 
 ✓ The implementation works correctly. 
 
@@ -392,15 +307,12 @@ An engineering task is considered complete only when:
 
 ✓ The Technical Lead approves the implementation. 
 
-Completion is measured by understanding—not by finishing commands. 
+Completion is measured by understanding — not by finishing commands. 
 
 ## **Engineering Workflow Summary** 
 
 ```
 Problem
-```
-
-```
 ↓
 Understand
 ↓
@@ -409,29 +321,12 @@ Learn
 Design
 ↓
 Review
-```
-
-```
 ↓
 Implement
-```
-
-```
 ↓
 Verify
-```
-
-```
 ↓
-```
-
-```
 Document
-```
-
-9 
-
-```
 ↓
 Reflect
 ↓
@@ -450,12 +345,9 @@ They begin with understanding.
 
 Every command executed during this project must support an engineering decision that has already been justified. 
 
-10 
-
-
 ## **Chapter 5 Change History**
 
-|Version|Date|Description|
+| Version | Date | Description |
 |---|---|---|
-|1.0|(original)|Initial chapter|
-|1.1|2026-07-13|§5.2 rewritten as the canonical lifecycle per ADR-022: diagram corrected to match stage text; Task Closure added as Stage 12; stage table and Authority Note added. §5.9 renamed Design Review & Approval; §5.11 renamed Verification.|
+| 1.0 | (original) | Initial chapter |
+| 1.1 | 2026-07-13 | §5.2 rewritten as the canonical lifecycle per ADR-022: diagram corrected to match stage text; Task Closure added as Stage 12; stage table and Authority Note added. §5.9 renamed Design Review & Approval; §5.11 renamed Verification. |

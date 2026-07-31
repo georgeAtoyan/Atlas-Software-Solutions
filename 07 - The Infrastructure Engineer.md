@@ -16,17 +16,12 @@ Engineering is a combination of knowledge, judgement, discipline and responsibil
 
 An Infrastructure Engineer is responsible for ensuring that systems remain: 
 
-Reliable. 
-
-Available. 
-
-Secure. 
-
-Maintainable. 
-
-Understandable. 
-
-Predictable. 
+- Reliable. 
+- Available. 
+- Secure. 
+- Maintainable. 
+- Understandable. 
+- Predictable. 
 
 The engineer's responsibility extends beyond individual servers. 
 
@@ -36,15 +31,9 @@ Every decision must consider the health of the entire infrastructure.
 
 An Infrastructure Engineer approaches every problem with curiosity rather than assumption. 
 
-1 
+The first question is never: "How do I fix this?" 
 
-The first question is never: 
-
-"How do I fix this?" 
-
-The first question is: 
-
-"What is actually happening?" 
+The first question is: "What is actually happening?" 
 
 Understanding precedes action. 
 
@@ -58,15 +47,11 @@ The Infrastructure Engineer takes ownership of the systems under their responsib
 
 Ownership means: 
 
-Understanding the environment. 
-
-Knowing how systems interact. 
-
-Maintaining documentation. 
-
-Improving reliability. 
-
-Preventing recurring problems. 
+- Understanding the environment. 
+- Knowing how systems interact. 
+- Maintaining documentation. 
+- Improving reliability. 
+- Preventing recurring problems. 
 
 Ownership is measured by responsibility rather than authority. 
 
@@ -79,8 +64,6 @@ Every component influences another.
 DNS affects authentication. 
 
 Authentication affects applications. 
-
-2 
 
 Certificates affect secure communication. 
 
@@ -96,15 +79,11 @@ Curiosity is considered a professional skill.
 
 The engineer should continuously ask: 
 
-Why was this technology created? 
-
-Why is it configured this way? 
-
-What alternatives exist? 
-
-What assumptions are being made? 
-
-How could this fail? 
+1. Why was this technology created? 
+2. Why is it configured this way? 
+3. What alternatives exist? 
+4. What assumptions are being made? 
+5. How could this fail? 
 
 Every answer should generate deeper understanding. 
 
@@ -114,17 +93,11 @@ Complexity is expensive.
 
 Simple systems are: 
 
-Easier to understand. 
-
-Easier to troubleshoot. 
-
-Easier to document. 
-
-Easier to secure. 
-
-Easier to maintain. 
-
-3 
+- Easier to understand. 
+- Easier to troubleshoot. 
+- Easier to document. 
+- Easier to secure. 
+- Easier to maintain. 
 
 The Infrastructure Engineer actively reduces unnecessary complexity. 
 
@@ -136,19 +109,13 @@ The Infrastructure Engineer develops disciplined habits.
 
 Examples include: 
 
-Reading documentation before implementing. 
-
-Testing changes. 
-
-Creating backups before modifications. 
-
-Documenting completed work. 
-
-Reviewing logs. 
-
-Verifying assumptions. 
-
-Following repeatable procedures. 
+- Reading documentation before implementing. 
+- Testing changes. 
+- Creating backups before modifications. 
+- Documenting completed work. 
+- Reviewing logs. 
+- Verifying assumptions. 
+- Following repeatable procedures. 
 
 Discipline produces reliable infrastructure. 
 
@@ -162,21 +129,7 @@ The engineer gathers evidence before proposing solutions.
 
 Typical workflow: 
 
-Observe. 
-
-Collect information. 
-
-Analyze. 
-
-4 
-
-Develop hypotheses. 
-
-Test. 
-
-Confirm. 
-
-Document. 
+Observe --> Collect information --> Analyze --> Develop hypotheses --> Test --> Confirm --> Document 
 
 The objective is identifying the root cause. 
 
@@ -192,17 +145,12 @@ Including your future self.
 
 Documentation should answer: 
 
-What exists? 
-
-Why does it exist? 
-
-How does it work? 
-
-How is it verified? 
-
-How is it restored? 
-
-How is it maintained? 
+1. What exists? 
+2. Why does it exist? 
+3. How does it work? 
+4. How is it verified? 
+5. How is it restored? 
+6. How is it maintained? 
 
 Good documentation reduces operational risk. 
 
@@ -212,17 +160,12 @@ Infrastructure is never finished.
 
 Every implementation can be improved. 
 
-5 
-
 After every project the engineer asks: 
 
-What worked well? 
-
-What caused unnecessary effort? 
-
-Which manual tasks could eventually be automated? 
-
-What should be redesigned? 
+1. What worked well? 
+2. What caused unnecessary effort? 
+3. Which manual tasks could eventually be automated? 
+4. What should be redesigned? 
 
 Improvement is continuous. 
 
@@ -232,19 +175,13 @@ Professional learning never stops.
 
 The Infrastructure Engineer studies: 
 
-Operating systems. 
-
-Networking. 
-
-Security. 
-
-Automation. 
-
-Architecture. 
-
-Troubleshooting. 
-
-Documentation. 
+- Operating systems. 
+- Networking. 
+- Security. 
+- Automation. 
+- Architecture. 
+- Troubleshooting. 
+- Documentation. 
 
 Learning follows business needs and engineering curiosity. 
 
@@ -254,25 +191,17 @@ Infrastructure engineering is collaborative.
 
 The engineer communicates clearly with: 
 
-Developers. 
-
-6 
-
-Management. 
-
-Support teams. 
-
-Other administrators. 
+- Developers. 
+- Management. 
+- Support teams. 
+- Other administrators. 
 
 Communication should be: 
 
-Clear. 
-
-Professional. 
-
-Evidence-based. 
-
-Respectful. 
+- Clear. 
+- Professional. 
+- Evidence-based. 
+- Respectful. 
 
 Technical decisions should be explained in language appropriate to the audience. 
 
@@ -282,21 +211,16 @@ Good decisions are rarely perfect.
 
 Engineering decisions balance: 
 
-Simplicity. 
-
-Security. Reliability. 
-
-Maintainability. 
-
-Performance. 
-
-Time. 
-
-Resources. 
+- Simplicity. 
+- Security. 
+- Reliability. 
+- Maintainability. 
+- Performance. 
+- Time. 
+- Resources. 
 
 The objective is selecting the most appropriate solution for current requirements. 
 
-7 
 
 ## **7.15 Professional Integrity** 
 
@@ -304,13 +228,10 @@ The Infrastructure Engineer acknowledges uncertainty.
 
 If knowledge is incomplete: 
 
-Investigate. 
-
-Read documentation. 
-
-Ask questions. 
-
-Verify. 
+- Investigate. 
+- Read documentation. 
+- Ask questions. 
+- Verify. 
 
 Guessing is unacceptable. 
 
@@ -330,23 +251,18 @@ Every incident should improve future systems.
 
 Questions include: 
 
-Why did this happen? 
-
-Could it have been prevented? 
-
-How quickly was it detected? 
-
-How could recovery improve? 
+1. Why did this happen? 
+2. Could it have been prevented? 
+3. How quickly was it detected? 
+4. How could recovery improve? 
 
 Every incident becomes operational knowledge. 
-
-8 
 
 ## **7.17 Engineering Growth** 
 
 The learner's progression follows four stages. 
 
-## **Stage 1 — Learner** 
+**Stage 1 — Learner** 
 
 Follows guidance. 
 
@@ -354,7 +270,7 @@ Builds foundational knowledge.
 
 Asks many questions. 
 
-## **Stage 2 — Junior Engineer** 
+**Stage 2 — Junior Engineer** 
 
 Understands systems. 
 
@@ -364,7 +280,7 @@ Requires architectural guidance.
 
 Begins troubleshooting confidently. 
 
-## **Stage 3 — Independent Infrastructure Engineer** 
+**Stage 3 — Independent Infrastructure Engineer** 
 
 Designs solutions. 
 
@@ -376,15 +292,13 @@ Reviews architecture critically.
 
 Mentors others when appropriate. 
 
-## **Stage 4 — Continuous Professional** 
+**Stage 4 — Continuous Professional** 
 
 Never stops improving. 
 
 Continuously studies new technologies. 
 
-Questions assumptions. 
-
-9 
+Questions assumptions.  
 
 Refines engineering judgement. 
 
@@ -394,29 +308,17 @@ Growth never truly ends.
 
 Throughout this project the Infrastructure Engineer develops habits that become automatic. 
 
-Before implementing: 
+Before implementing: Understand. 
 
-Understand. 
+Before changing: Backup. 
 
-Before changing: 
+Before assuming: Verify. 
 
-Backup. 
+Before documenting: Test. 
 
-Before assuming: 
+Before automating: Master the manual process. 
 
-Verify. 
-
-Before documenting: 
-
-Test. 
-
-Before automating: 
-
-Master the manual process. 
-
-Before finishing: 
-
-Review. 
+Before finishing: Review. 
 
 Professional habits produce professional infrastructure. 
 
@@ -426,19 +328,12 @@ Success is not measured by the number of technologies learned.
 
 Success is measured by the ability to: 
 
-Understand systems. 
-
-10 
-
-Solve problems methodically. 
-
-Explain decisions. 
-
-Maintain infrastructure. 
-
-Learn independently. 
-
-Work professionally. 
+- Understand systems.  
+- Solve problems methodically. 
+- Explain decisions. 
+- Maintain infrastructure. 
+- Learn independently. 
+- Work professionally. 
 
 Technology evolves throughout a career. 
 
@@ -472,15 +367,10 @@ My objective is to become an engineer capable of designing, maintaining and cont
 
 Tools will change. 
 
-11 
-
 Technologies will evolve. 
 
 Best practices will improve. 
 
 The engineer who continuously thinks, questions, documents and learns will remain valuable regardless of which technologies become popular. 
 
-This blueprint is designed to build that engineer. 
-
-12 
-
+This blueprint is designed to build that engineer.

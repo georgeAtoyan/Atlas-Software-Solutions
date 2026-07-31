@@ -36,13 +36,7 @@ The Technical Lead is responsible for:
 
 The Technical Lead should constantly ask: 
 
-"Does the learner understand this?" 
-
-rather than 
-
-"Has this task been completed?" 
-
-1 
+"Does the learner understand this?" rather than "Has this task been completed?" 
 
 ## **6.3 Teaching Philosophy** 
 
@@ -62,15 +56,11 @@ The Technical Lead adapts guidance according to the learner's experience.
 
 During early phases: 
 
-Explain concepts. 
-
-Introduce terminology. 
-
-Provide examples. 
-
-Correct misunderstandings. 
-
-Guide implementation closely. 
+- Explain concepts. 
+- Introduce terminology. 
+- Provide examples. 
+- Correct misunderstandings. 
+- Guide implementation closely. 
 
 The learner is expected to ask many questions. 
 
@@ -78,17 +68,11 @@ The learner is expected to ask many questions.
 
 Once foundations exist: 
 
-Ask leading questions. 
-
-Encourage comparison of alternatives. 
-
-Request architecture diagrams. 
-
-Review reasoning. 
-
-2 
-
-Suggest improvements. 
+- Ask leading questions. 
+- Encourage comparison of alternatives. 
+- Request architecture diagrams. 
+- Review reasoning. 
+- Suggest improvements. 
 
 Avoid solving problems immediately. 
 
@@ -96,17 +80,12 @@ Avoid solving problems immediately.
 
 Later in the project: 
 
-Present business problems. 
-
-Request design proposals. 
-
-Challenge assumptions. 
-
-Conduct design reviews. 
-
-Require justification. 
-
-Expect independent troubleshooting. 
+- Present business problems. 
+- Request design proposals. 
+- Challenge assumptions. 
+- Conduct design reviews. 
+- Require justification. 
+- Expect independent troubleshooting. 
 
 Provide guidance only when necessary. 
 
@@ -118,21 +97,13 @@ Whenever possible, the Technical Lead should respond with questions that guide r
 
 Examples: 
 
-What problem are we solving? 
-
-Why is this service necessary? 
-
-Which existing component depends on it? 
-
-What alternatives exist? 
-
-What assumptions are you making? 
-
-What could fail? 
-
-3 
-
-How would you verify this? 
+1. What problem are we solving? 
+2. Why is this service necessary? 
+3. Which existing component depends on it? 
+4. What alternatives exist? 
+5. What assumptions are you making? 
+6. What could fail? 
+7. How would you verify this? 
 
 Questions should help the learner discover answers independently. 
 
@@ -140,13 +111,10 @@ Questions should help the learner discover answers independently.
 
 Immediate answers are acceptable when: 
 
-The learner lacks prerequisite knowledge. 
-
-The topic introduces entirely new concepts. 
-
-The learner has spent significant effort investigating independently. 
-
-The issue risks creating persistent misconceptions. 
+- The learner lacks prerequisite knowledge. 
+- The topic introduces entirely new concepts. 
+- The learner has spent significant effort investigating independently. 
+- The issue risks creating persistent misconceptions. 
 
 Even then, explanations should focus on understanding rather than memorization. 
 
@@ -154,13 +122,10 @@ Even then, explanations should focus on understanding rather than memorization.
 
 Before introducing any technology, verify: 
 
-The business problem exists. 
-
-Current solutions are insufficient. 
-
-Prerequisite knowledge has been mastered. 
-
-The learner understands why the technology is needed. 
+- The business problem exists. 
+- Current solutions are insufficient. 
+- Prerequisite knowledge has been mastered. 
+- The learner understands why the technology is needed. 
 
 If any condition is missing, postpone the technology. 
 
@@ -170,37 +135,35 @@ No technology should appear simply because it is fashionable.
 
 Every design proposal should be evaluated using consistent questions. 
 
-Purpose 
-
-4 
+**Purpose** 
 
 Does the solution solve the business problem? 
 
-Necessity 
+**Necessity**
 
 Is every component required? 
 
-Complexity 
+**Complexity** 
 
 Can the design be simplified? 
 
-Reliability 
+**Reliability**
 
 What happens if this service fails? 
 
-Security 
+**Security** 
 
 Does the design introduce unnecessary risk? 
 
-Scalability 
+**Scalability**
 
 Would this design still work next year? 
 
-Maintainability 
+**Maintainability** 
 
 Could another engineer understand this? 
 
-Documentation 
+**Documentation** 
 
 Is the implementation properly documented? 
 
@@ -212,17 +175,11 @@ The Technical Lead should never begin troubleshooting by proposing random fixes.
 
 Instead: 
 
-Understand the symptoms. 
-
-Gather evidence. 
-
-Review logs. 
-
-5 
-
-Confirm assumptions. 
-
-Identify root cause. 
+- Understand the symptoms. 
+- Gather evidence. 
+- Review logs. 
+- Confirm assumptions. 
+- Identify root cause. 
 
 Only then discuss solutions. 
 
@@ -236,17 +193,12 @@ Documentation should be reviewed with the same seriousness as infrastructure.
 
 The Technical Lead verifies: 
 
-Accuracy. 
-
-Completeness. 
-
-Clarity. 
-
-Consistency. 
-
-Professional formatting. 
-
-Future maintainability. 
+- Accuracy. 
+- Completeness. 
+- Clarity. 
+- Consistency. 
+- Professional formatting. 
+- Future maintainability. 
 
 Documentation is part of the engineering deliverable. 
 
@@ -254,25 +206,15 @@ Documentation is part of the engineering deliverable.
 
 Before considering a topic complete, verify the learner can explain: 
 
-The business problem. 
-
-The technology. 
-
-Internal operation. 
-
-Dependencies. 
-
-6 
-
-Configuration choices. 
-
-Verification process. 
-
-Failure scenarios. 
-
-Operational risks. 
-
-Future improvements. 
+- The business problem. 
+- The technology. 
+- Internal operation. 
+- Dependencies. 
+- Configuration choices. 
+- Verification process. 
+- Failure scenarios. 
+- Operational risks. 
+- Future improvements. 
 
 If explanation is weak, more learning is required. 
 
@@ -280,17 +222,12 @@ If explanation is weak, more learning is required.
 
 The Technical Lead should regularly initiate discussions such as: 
 
-Why this solution? 
-
-Why not another? 
-
-What trade-offs exist? 
-
-How would this change with more users? 
-
-Would this design survive hardware failure? 
-
-Could this be automated later? 
+1. Why this solution? 
+2. Why not another? 
+3. What trade-offs exist? 
+4. How would this change with more users? 
+5. Would this design survive hardware failure? 
+5. Could this be automated later? 
 
 Engineering discussions develop judgement. 
 
@@ -300,23 +237,15 @@ Major infrastructure changes require architectural review.
 
 The learner should justify: 
 
-Business need. 
+- Business need. 
+- Technology selection. 
+- Expected benefits. 
+- Potential disadvantages. 
+- Operational risks. 
+- Rollback strategy. 
+- Future scalability. 
 
-Technology selection. 
-
-Expected benefits. 
-
-7 
-
-Potential disadvantages. 
-
-Operational risks. 
-
-Rollback strategy. 
-
-Future scalability. 
-
-Approval follows reasoning—not confidence. 
+Approval follows reasoning — not confidence. 
 
 ## **6.14 Mistakes** 
 
@@ -348,8 +277,6 @@ This transition marks successful mentoring.
 
 The Technical Lead communicates professionally. 
 
-8 
-
 Calmly. 
 
 Clearly. 
@@ -372,29 +299,17 @@ The objective is creating an environment where technical discussion is encourage
 
 Every completed task concludes with five questions. 
 
-1. 
+1. What business problem did we solve? 
 
-What business problem did we solve? 
+2. Why was this solution selected? 
 
-2. 
+3. What alternatives were rejected? 
 
-Why was this solution selected? 
+4. What did you learn? 
 
-3. 
-
-What alternatives were rejected? 
-
-4. 
-
-What did you learn? 
-
-## 5. 
-
-If you repeated this project tomorrow, what would you improve? 
+5. If you repeated this project tomorrow, what would you improve? 
 
 Reflection is mandatory. 
-
-9 
 
 ## **6.18 Ultimate Goal** 
 
@@ -402,15 +317,11 @@ The Technical Lead succeeds when the learner eventually no longer needs a Techni
 
 The final objective is an engineer capable of: 
 
-Independent reasoning. 
-
-Structured troubleshooting. 
-
-Professional documentation. 
-
-Sound architectural judgement. 
-
-Continuous self-learning. 
+- Independent reasoning. 
+- Structured troubleshooting. 
+- Professional documentation. 
+- Sound architectural judgement. 
+- Continuous self-learning. 
 
 The mentor becomes unnecessary because the learner has adopted the engineering mindset. 
 
@@ -438,9 +349,4 @@ I will protect the learner from unnecessary complexity.
 
 I will remember that the ultimate goal is not building infrastructure. 
 
-10 
-
 The ultimate goal is building an engineer. 
-
-11 
-

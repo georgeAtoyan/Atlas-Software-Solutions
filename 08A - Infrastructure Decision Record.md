@@ -12,7 +12,6 @@ ADR documents are living engineering records.
 
 They explain not only **what** was chosen, but also **why** . 
 
-
 ## **0. Governance Preamble**
 
 ### 0.1 Document Identity
@@ -39,41 +38,43 @@ ADR identifiers are permanent and never reused (STD-ADR-001 §6.1). Identifiers 
 
 ## **ADR-001** 
 
-## **Title** 
+**Title** 
 
 Segmented Network Architecture 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Context** 
+**Context** 
 
 The infrastructure will continue growing throughout multiple project phases. 
 
 A single flat network would eventually require significant redesign. 
 
-## **Decision** 
+**Decision** 
 
 The infrastructure will be divided into multiple logical network segments from the beginning. 
 
 Initial segments include: 
 
-- Management • Server • Client 
+- Management
+- Server
+- Client 
 
 A DMZ network will be introduced when public-facing services become necessary. 
 
-## **Rationale** 
+**Rationale** 
 
 This design supports long-term scalability while introducing realistic networking concepts early. 
 
-## **Alternatives Considered** 
+**Alternatives Considered** 
 
 Single flat LAN. 
 
 Rejected because future infrastructure growth would require disruptive redesign. 
 
-## **Consequences** 
+**Consequences** 
 
 Routing becomes part of the infrastructure from the beginning. 
 
@@ -81,45 +82,40 @@ Future network expansion becomes straightforward.
 
 ## **ADR-002** 
 
-## **Title** 
+**Title** 
 
 Dedicated Router Virtual Machine 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Context** 
+**Context** 
 
 VirtualBox NAT provides Internet connectivity but hides many important networking concepts. 
 
-## **Decision** 
+**Decision** 
 
 Deploy a dedicated Debian Router virtual machine responsible for: 
 
 - packet forwarding 
-
 - routing 
-
 - firewalling
-  
 - NAT 
-
 - future VPN services 
-
 - future DHCP services 
 
-## **Rationale** 
+**Rationale** 
 
 A dedicated router provides significantly better visibility into networking and mirrors real-world infrastructure. 
 
-## **Alternatives Considered** 
+**Alternatives Considered** 
 
 VirtualBox NAT only. 
 
 Rejected due to limited educational value. 
 
-## **Consequences** 
+**Consequences** 
 
 One additional virtual machine is required. 
 
@@ -127,79 +123,78 @@ Networking becomes significantly more realistic.
 
 ## **ADR-003** 
 
-## **Title** 
+**Title** 
 
 Internal DNS Namespace 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Context** 
+**Context** 
 
 The project requires a consistent internal naming convention. 
 
-## **Decision** 
+**Decision** 
 
-The internal domain shall be: 
+The internal domain shall be: atlas.lab 
 
-atlas.lab 
-
-## **Rationale** 
+**Rationale** 
 
 The namespace reflects the fictional company and remains isolated from public DNS. 
  
-## **Alternatives Considered** 
+**Alternatives Considered** 
 
 company.lab 
 
 atlas.local corp.local 
 
-## **Consequences** 
+**Consequences** 
 
 Every internal service will use this namespace. 
 
 Examples: 
 
-srv-dns-01.atlas.lab 
-
-srv-web-01.atlas.lab 
-
-srv-git-01.atlas.lab 
+1. srv-dns-01.atlas.lab 
+2. srv-web-01.atlas.lab 
+3. srv-git-01.atlas.lab 
 
 ## **ADR-004** 
 
-## **Title** 
+**Title** 
 
 Server Naming Convention 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Servers follow the convention: 
 
-srv-<role>-<number> 
+srv-role-number 
 
-Examples: srv-dns-01 
+Examples: srv-dns-01, srv-web-01, srv-ca-01, srv-git-01, srv-monitor-01 
 
-srv-web-01 
+Workstations: 
 
-srv-ca-01 
+- cli-admin-01 
+- cli-dev-01 
 
-srv-git-01 srv-monitor-01 Workstations: 
+Network devices: 
 
-cli-admin-01 cli-dev-01 Network devices: rtr-edge-01 Future switches: 
+- rtr-edge-01 
 
-sw-core-01 
+Future switches: 
 
-## **Rationale** 
+- sw-core-01 
+
+**Rationale** 
 
 Consistent naming improves readability and scalability. 
 
-## **Consequences** 
+**Consequences** 
 
 Every infrastructure component follows predictable naming. 
 
@@ -207,75 +202,63 @@ Every infrastructure component follows predictable naming.
 
 > **⚠ Supersession Notice (2026-07-13):** This record is **superseded by ADR-021**. The ranges below must not be used for any allocation. The single authoritative IP Address Allocation Policy is **Infrastructure Architecture (Chapter 8B), Section 8**. Reason: the ranges below conflict with Chapter 8B §8 (audit finding AUD-C-01). Operational impact: none — no deployed system was addressed under these ranges. The original decision text is preserved unmodified below per STD-ADR-001 §8.
 
-## **Title** 
+**Title** 
 
 Static Address Planning 
 
-## **Status** 
+**Status** 
 
 **Superseded** — Superseded by ADR-021 (2026-07-13). Original status: Accepted.
 
-## **Decision** 
+**Decision** 
 
 IP addresses are reserved by functional ranges. 
 
-Infrastructure 
+Infrastructure: 10–19 
 
-10–19 
+Network Services: 20–39 
 
-Network Services 
+Application Servers: 40–59 
 
-20–39 
+Client Systems: 60–79 
 
-Application Servers 
+Temporary Systems: 80–99 
 
-40–59 
+Future Expansion: 100–199 
 
-Client Systems 
-
-60–79 
-
-Temporary Systems 
-
-80–99 
-
-Future Expansion 
-
-100–199 
-
-## **Rationale** 
+**Rationale** 
 
 Predictable addressing simplifies troubleshooting and documentation. 
 
 ## **ADR-006** 
 
-## **Title** 
+**Title** 
 
 Service Isolation 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Context** 
+**Context** 
 
 Each major infrastructure service represents an independent responsibility. 
 
-## **Decision** 
+**Decision** 
 
 Every major service receives its own virtual machine. 
  
-## **Rationale** 
+**Rationale** 
 
 Isolation simplifies troubleshooting, documentation and future migration. 
 
-## **Alternatives Considered** 
+**Alternatives Considered** 
 
 Multiple services per server. 
 
 Rejected for educational clarity. 
 
-## **Consequences** 
+**Consequences** 
 
 Higher RAM usage. 
 
@@ -283,15 +266,15 @@ Much cleaner architecture.
 
 ## **ADR-007** 
 
-## **Title** 
+**Title** 
 
 Operating System Strategy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 The infrastructure will intentionally use both Debian Stable and Ubuntu Server LTS. 
 
@@ -301,29 +284,29 @@ Ubuntu Server LTS will host application-oriented services such as Git, monitorin
 
 Ubuntu Desktop will be used as the primary administrative workstation. 
 
-## **Rationale** 
+**Rationale** 
 
 This reflects common enterprise environments and broadens operational experience without introducing unnecessary complexity. 
 
-## **Consequences** 
+**Consequences** 
 
 The learner gains practical familiarity with both Debian-based distributions while recognizing that core Linux administration principles remain consistent. 
 
 ## **ADR-008** 
 
-## **Title** 
+**Title** 
 
 Incremental Infrastructure Growth 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Virtual machines are created only when business requirements justify their existence. 
 
-## **Rationale** 
+**Rationale** 
 
 Infrastructure should evolve naturally. 
 
@@ -331,72 +314,71 @@ Unused services increase operational complexity.
 
 ## **ADR-009** 
 
-## **Title** 
+**Title** 
 
 Identity Management Strategy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Local Linux accounts are used initially. 
 
 Centralized identity management will be introduced only when business growth requires it. 
 
-## **Rationale** 
+**Rationale** 
 
 The learner must first understand local account management before introducing LDAP, SSSD and PAM. 
 
 ## **ADR-010** 
 
-## **Title** 
+**Title** 
 
 Certificate Strategy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Internal services will use an Internal Certificate Authority. 
 
-## **Rationale** 
+**Rationale** 
 
 The project emphasizes understanding PKI concepts rather than relying on publicly issued certificates. 
 
 ## **ADR-011** 
 
-## **Title** 
+**Title** 
 
 Repository Strategy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Maintain a dedicated Infrastructure Repository alongside separate repositories for future application projects. 
 
-## **Rationale** 
+**Rationale** 
 
 Separating infrastructure from application code reflects professional engineering practice and keeps responsibilities clear. 
 
-
 ## **ADR-012** 
 
-## **Title** 
+**Title** 
 
 Documentation Standard 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Every engineering task must produce: 
 
@@ -406,145 +388,147 @@ Every engineering task must produce:
 
 - ADR (when applicable) 
 
-- Runbook • Verification Notes 
+- Runbook
+
+- Verification Notes 
 
 - Lessons Learned 
 
-## **Rationale** 
+**Rationale** 
 
 Documentation is considered part of the engineering deliverable. 
 
 ## **ADR-013** 
 
-## **Title** 
+**Title** 
 
 Diagram Standard 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 draw.io is the primary tool for infrastructure diagrams. 
 
 Mermaid diagrams may be used for lightweight documentation within Markdown. 
 
-## **Rationale** 
+**Rationale** 
 
 draw.io provides flexibility for detailed architecture diagrams, while Mermaid integrates well with repository documentation. 
 
 ## **ADR-014** 
 
-## **Title** 
+**Title** 
 
 Backup Philosophy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Backup strategies will be introduced from the Foundation Phase onward. 
 
 Backups are treated as a core operational responsibility rather than an optional enhancement. 
 
-## **Rationale** 
+**Rationale** 
 
 Operational resilience begins with recoverability. 
 
 ## **ADR-015** 
 
-## **Title** 
+**Title** 
 
 Logging Strategy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Native system logging is used initially. 
 
 Centralized logging will be introduced as infrastructure complexity increases. 
 
-## **Rationale** 
+**Rationale** 
 
 The learner should first understand local log analysis before adopting centralized logging platforms. 
 
 ## **ADR-016** 
 
-## **Title** 
+**Title** 
 
 Monitoring Strategy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Monitoring will be introduced after multiple infrastructure services are operational. 
 
 The monitoring stack will consist of Prometheus and Grafana. 
 
-## **Rationale** 
+**Rationale** 
 
 Monitoring should observe an existing infrastructure rather than an empty one. 
 
 ## **ADR-017** 
 
-## **Title** 
+**Title** 
 
 Security by Design 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Security controls are integrated into every engineering task from the beginning. 
 
 Examples include least privilege, SSH hardening, firewall configuration, certificate management and secure service configuration. 
 
-## **Rationale** 
+**Rationale** 
 
 Security is an architectural property, not a later enhancement. 
 
 ## **ADR-018** 
 
-## **Title** 
+**Title** 
 
 Automation Philosophy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Manual administration must be mastered before introducing automation. 
 
 Configuration management tools will only appear after manual processes are fully understood. 
 
-## **Rationale** 
+**Rationale** 
 
 Automation should amplify competence rather than compensate for missing fundamentals. 
 
 ## **ADR-019** 
 
-## **Title** 
+**Title** 
 
 Cloud Adoption Strategy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 The Foundation Project remains on-premises using VirtualBox. 
 
@@ -552,25 +536,25 @@ Cloud technologies will be introduced after the learner demonstrates confidence 
 
 AWS will serve as the primary cloud platform for future phases. 
 
-## **Rationale** 
+**Rationale** 
 
 Strong infrastructure fundamentals transfer naturally to cloud environments. 
 
 ## **ADR-020** 
 
-## **Title** 
+**Title** 
 
 Infrastructure Philosophy 
 
-## **Status** 
+**Status** 
 
 Accepted 
 
-## **Decision** 
+**Decision** 
 
 Architectural decisions prioritize clarity, maintainability and operational understanding over adopting the newest technologies. 
 
-## **Rationale** 
+**Rationale** 
 
 The objective is to develop a strong Infrastructure Engineer rather than to maximize the number of technologies used. 
 
@@ -597,7 +581,6 @@ A well-designed infrastructure is not the result of installing many technologies
 It is the result of making a series of deliberate, documented and well-reasoned engineering decisions. 
 
 This ADR establishes the architectural foundation upon which every future Engineering Task in the Atlas Software Solutions project will be built. 
-
 
 ## **Chapter 8A Change History**
 

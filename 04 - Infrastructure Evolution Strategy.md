@@ -20,29 +20,29 @@ Business requirements are.
 
 The infrastructure evolves according to four simple rules. 
 
-## **Rule 1** 
+**Rule 1** 
 
 A business problem appears. 
 
 ↓ 
 
-## **Rule 2** 
+**Rule 2** 
 
 Current infrastructure is no longer sufficient. 
 
 ↓ 
 
-## **Rule 3** 
+**Rule 3** 
 
 An engineering solution is evaluated. 
 
 ↓ 
 
-1 
-
-## **Rule 4** 
+**Rule 4** 
 
 The chosen technology is implemented. 
+
+---
 
 This sequence must never be reversed. 
 
@@ -64,175 +64,124 @@ The company evolves through multiple operational stages.
 
 ## **Phase 1 — Foundation** 
 
-## **Company State** 
+**Company State** 
 
-Atlas is a young software company. 
+- Atlas is a young software company. 
+- Approximately 25 employees. 
+- A single office. 
+- A small server room. 
+- No dedicated infrastructure team. 
+- The learner becomes the first Infrastructure Engineer. 
 
-Approximately 25 employees. 
+**Business Priorities** 
 
-A single office. 
-
-A small server room. 
-
-No dedicated infrastructure team. 
-
-The learner becomes the first Infrastructure Engineer. 
-
-2 
-
-## **Business Priorities** 
-
-Reliable Linux servers. 
-
-Internal networking. 
-
-Secure remote administration. 
-
-Internal DNS. 
-
-Basic web services. 
-
-System documentation. 
-
-Backups. 
+- Reliable Linux servers. 
+- Internal networking. 
+- Secure remote administration. 
+- Internal DNS. 
+- Basic web services. 
+- System documentation. 
+- Backups. 
 
 At this stage simplicity is the primary objective. 
 
-## **Engineering Goal** 
+**Engineering Goal** 
 
-Build stable foundations. 
-
-Nothing should be automated before being understood. 
+- Build stable foundations. 
+- Nothing should be automated before being understood. 
 
 ## **Phase 2 — Internal Services** 
 
-## **Company Growth** 
+**Company Growth** 
 
-More developers join the company. 
+- More developers join the company. 
+- Internal applications begin appearing. 
+- Several Linux servers are now operating. 
+- Infrastructure slowly becomes harder to manage. 
 
-Internal applications begin appearing. 
+**New Business Problems** 
 
-Several Linux servers are now operating. 
+- Internal websites require HTTPS. 
+- Certificates are managed manually. 
+- Internal trust becomes difficult. 
+- Developers need additional services. 
 
-Infrastructure slowly becomes harder to manage. 
+**Engineering Response** 
 
-## **New Business Problems** 
-
-Internal websites require HTTPS. 
-
-3 
-
-Certificates are managed manually. 
-
-Internal trust becomes difficult. 
-
-Developers need additional services. 
-
-## **Engineering Response** 
-
-Introduce an Internal Certificate Authority. 
-
-Implement HTTPS. 
-
-Improve internal security. 
-
-Create standardized certificate management. 
+- Introduce an Internal Certificate Authority. 
+- Implement HTTPS. 
+- Improve internal security. 
+- Create standardized certificate management. 
 
 ## **Phase 3 — Identity Management** 
 
-## **Company Growth** 
+**Company Growth** 
 
-More Linux servers. 
+- More Linux servers. 
+- More developers. 
+- More administrators. 
+- Local Linux users become difficult to maintain. 
+- Password management becomes inconsistent. 
 
-More developers. 
-
-More administrators. 
-
-Local Linux users become difficult to maintain. 
-
-Password management becomes inconsistent. 
-
-## **Business Problem** 
+**Business Problem** 
 
 Identity management no longer scales. 
 
-## **Engineering Response** 
+**Engineering Response** 
 
-Centralized authentication. 
-
-LDAP. 
-
-4 
+- Centralized authentication. 
+- LDAP. 
 
 Later: 
 
-Kerberos. 
-
-SSSD. 
-
-PAM integration. 
+- Kerberos. 
+- SSSD. 
+- PAM integration. 
 
 ## **Phase 4 — Operational Efficiency** 
 
-## **Company Growth** 
+**Company Growth** 
 
-Developers deploy applications more frequently. 
+- Developers deploy applications more frequently. 
+- Infrastructure changes occur regularly. 
+- Manual administration consumes increasing amounts of time. 
 
-Infrastructure changes occur regularly. 
+**Business Problems** 
 
-Manual administration consumes increasing amounts of time. 
+- Configuration drift. 
+- Repeated manual work. 
+- Inconsistent deployments. 
 
-## **Business Problems** 
+**Engineering Response** 
 
-Configuration drift. 
-
-Repeated manual work. 
-
-Inconsistent deployments. 
-
-## **Engineering Response** 
-
-Configuration management. 
-
-Version-controlled infrastructure. 
-
-Deployment automation. 
-
-Engineering standards. 
-
-5 
+- Configuration management. 
+- Version-controlled infrastructure. 
+- Deployment automation. 
+- Engineering standards. 
 
 ## **Phase 5 — Modern Infrastructure** 
 
-## **Company Growth** 
+**Company Growth** 
 
-Applications become containerized. 
+- Applications become containerized. 
+- Development accelerates. 
+- Operational complexity increases. 
 
-Development accelerates. 
+**Engineering Problems** 
 
-Operational complexity increases. 
+- Environment inconsistency. 
+- Application portability. 
+- Deployment reliability. 
 
-## **Engineering Problems** 
+**Engineering Response** 
 
-Environment inconsistency. 
-
-Application portability. 
-
-Deployment reliability. 
-
-## **Engineering Response** 
-
-Containers. 
-
-Image management. 
-
-Container networking. 
+- Containers. 
+- Image management. 
+- Container networking. 
 
 Eventually: 
 
-Container orchestration. 
-
-Only if justified. 
+- Container orchestration. (Only if justified)
 
 ## **4.4 Learning Model**
 
@@ -251,21 +200,19 @@ Learning is always driven by engineering requirements — never by chapter numbe
 
 A technology may only be introduced when all of the following conditions are satisfied. 
 
-## **Condition 1** 
+**Condition 1** 
 
 A genuine business problem exists. 
 
-7 
-
-## **Condition 2** 
+**Condition 2** 
 
 The learner understands why the current solution is insufficient. 
 
-## **Condition 3** 
+**Condition 3** 
 
 The learner understands the fundamentals required for the next technology. 
 
-## **Condition 4** 
+**Condition 4** 
 
 The learner can explain why the selected technology is preferable to simpler alternatives. 
 
@@ -277,17 +224,12 @@ Every completed phase concludes with an engineering review.
 
 Questions include: 
 
-What problem was solved? 
-
-Why was this solution selected? 
-
-Which alternatives were rejected? 
-
-What limitations still exist? 
-
-Which new operational problems appeared? 
-
-What should improve next? 
+1. What problem was solved? 
+2. Why was this solution selected? 
+3. Which alternatives were rejected? 
+4. What limitations still exist? 
+5. Which new operational problems appeared? 
+6. What should improve next? 
 
 The project continuously evaluates infrastructure rather than simply adding services. 
 
@@ -297,21 +239,13 @@ Real engineering is driven by constraints.
 
 Throughout the project the learner must continuously consider: 
 
-8 
-
-Available RAM. 
-
-Available storage. 
-
-Available budget. 
-
-Time. 
-
-Security. 
-
-Reliability. 
-
-Operational complexity. 
+- Available RAM. 
+- Available storage. 
+- Available budget. 
+- Time. 
+- Security. 
+- Reliability. 
+- Operational complexity. 
 
 Every architectural decision must respect these limitations. 
 
@@ -325,29 +259,17 @@ During every phase the Technical Lead follows a consistent mentoring process.
 
 The Technical Lead should: 
 
-Present the business problem. 
-
-Ask guiding questions. 
-
-Help analyze possible approaches. 
-
-Discuss trade-offs. 
-
-Encourage independent reasoning. 
-
-Review the proposed design. 
-
-Challenge assumptions. 
-
-Approve the architecture. 
-
-Support implementation. 
-
-9 
-
-Review documentation. 
-
-Conduct a post-implementation review. 
+- Present the business problem. 
+- Ask guiding questions. 
+- Help analyze possible approaches. 
+- Discuss trade-offs. 
+- Encourage independent reasoning. 
+- Review the proposed design. 
+- Challenge assumptions. 
+- Approve the architecture. 
+- Support implementation. 
+- Review documentation. 
+- Conduct a post-implementation review. 
 
 The Technical Lead should avoid becoming an instruction generator. 
 
@@ -357,23 +279,15 @@ Its primary responsibility is developing engineering judgement.
 
 The learner is expected to: 
 
-Understand the business requirement. 
-
-Study the necessary theory. 
-
-Read the recommended chapters. 
-
-Design the proposed solution. 
-
-Discuss alternatives. 
-
-Implement the solution. 
-
-Verify functionality. 
-
-Document the implementation. 
-
-Reflect on lessons learned. 
+- Understand the business requirement. 
+- Study the necessary theory. 
+- Read the recommended chapters. 
+- Design the proposed solution. 
+- Discuss alternatives. 
+- Implement the solution. 
+- Verify functionality. 
+- Document the implementation. 
+- Reflect on lessons learned. 
 
 Engineering is an active discipline. 
 
@@ -385,19 +299,12 @@ The first project concludes when the learner can independently operate the infra
 
 At this point the learner should possess: 
 
-10 
-
-Strong Linux fundamentals. 
-
-Networking competence. 
-
-Professional documentation skills. 
-
-Practical troubleshooting ability. 
-
-Infrastructure design experience. 
-
-Confidence discussing engineering decisions during technical interviews. 
+- Strong Linux fundamentals. 
+- Networking competence. 
+- Professional documentation skills. 
+- Practical troubleshooting ability. 
+- Infrastructure design experience. 
+- Confidence discussing engineering decisions during technical interviews. 
 
 The infrastructure itself is not considered "finished." 
 
@@ -411,12 +318,9 @@ Infrastructure is not built by installing software.
 
 Infrastructure is built by solving business problems one engineering decision at a time. 
 
-11 
-
-
 ## **Chapter 4 Change History**
 
-|Version|Date|Description|
-|---|---|---|
-|1.0|(original)|Initial chapter|
-|1.1|2026-07-13|§4.4 workflow diagram removed; replaced with reference to the canonical lifecycle (Chapter 5 §5.2, per ADR-022) and a learning-oriented grouping of the canonical stages.|
+| Version | Date | Description |
+| --- | --- | --- |
+| 1.0 | (original) | Initial chapter |
+| 1.1 | 2026-07-13 | §4.4 workflow diagram removed; replaced with reference to the canonical lifecycle (Chapter 5 §5.2, per ADR-022) and a learning-oriented grouping of the canonical stages. |

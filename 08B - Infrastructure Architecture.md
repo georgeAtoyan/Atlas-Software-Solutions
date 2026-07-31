@@ -36,37 +36,35 @@ The objective is not to simulate a large enterprise, but to build and operate a 
 
 All architectural decisions follow these principles: 
 
-## **Business-Driven** 
+**Business-Driven** 
 
 Technology exists to solve business problems. 
 
-1 
-
-## **Incremental Growth** 
+**Incremental Growth** 
 
 Infrastructure evolves as company requirements change. 
 
-## **Simplicity** 
+**Simplicity** 
 
 The simplest correct solution is preferred. 
 
-## **Isolation** 
+**Isolation** 
 
 Each major infrastructure service runs on its own virtual machine. 
 
-## **Documentation** 
+**Documentation** 
 
 Every implementation is documented. 
 
-## **Security by Design** 
+**Security by Design** 
 
 Security considerations are integrated from the beginning. 
 
-## **Operational Visibility** 
+**Operational Visibility** 
 
 Infrastructure should be observable, understandable and easy to troubleshoot. 
 
-## **Reproducibility** 
+**Reproducibility** 
 
 Every service must be rebuildable using documented procedures. 
 
@@ -74,29 +72,17 @@ Every service must be rebuildable using documented procedures.
 
 The infrastructure operates entirely inside VirtualBox. 
 
-Host Operating System 
+Host Operating System: Windows 11 
+Hypervisor: Oracle VirtualBox 
 
-Windows 11 
+Primary Administrative Tools:
 
-Hypervisor 
-
-2 
-
-Oracle VirtualBox 
-
-Primary Administrative Tools 
-
-PowerShell 
-
-SSH 
-
-Git 
-
-Visual Studio Code 
-
-draw.io 
-
-Markdown 
+- PowerShell 
+- SSH 
+- Git 
+- Visual Studio Code 
+- draw.io 
+- Markdown 
 
 Future cloud expansion will use AWS. 
 
@@ -125,8 +111,6 @@ Automation
 Quarter 4 
 
 Container Platform 
-
-3 
 
 ↓ 
 
@@ -170,55 +154,38 @@ Future phases will introduce:
 
 without redesigning the existing architecture. 
 
-4 
-
 ## **7. Network Segments** 
 
 ## **Management LAN** 
 
-Purpose 
+Purpose: Infrastructure administration. 
 
-Infrastructure administration. 
+Examples: 
 
-Examples 
-
-Administrative workstation. 
-
-Future jump host. 
-
-Management interfaces. 
+- Administrative workstation. 
+- Future jump host. 
+- Management interfaces. 
 
 Only administrators operate within this network. 
 
 ## **Server LAN** 
 
-Purpose 
+Purpose: Internal infrastructure services. 
 
-Internal infrastructure services. 
+Examples: 
 
-Examples 
+- DNS 
+- Certificate Authority 
+- LDAP 
+- Git 
+- Monitoring 
+- Application services 
 
-DNS 
-
-Certificate Authority 
-
-LDAP 
-
-Git 
-
-Monitoring 
-
-Application services 
-
-Direct user access is not permitted. 
-
-5 
+Direct user access is not permitted.  
 
 ## **Client LAN** 
 
-Purpose 
-
-Developer and employee workstations. 
+Purpose: Developer and employee workstations. 
 
 Used to validate production-like behavior from a client perspective. 
 
@@ -256,8 +223,6 @@ Gateway
 
 Gateway 
 
-6 
-
 192.168.30.1 
 
 ## **Address Allocation Policy** 
@@ -285,43 +250,38 @@ IP addresses are assigned statically unless a future Engineering Task introduces
 
 Every infrastructure component follows predictable naming. 
 
-Servers 
+Servers: srv-role-number 
 
-srv-<role>-<number> 
+Examples: 
 
-Examples 
-
-srv-dns-01 
-
-srv-ca-01 
-
-srv-web-01 
-
-srv-git-01 
-
-srv-monitor-01 
+- srv-dns-01 
+- srv-ca-01 
+- srv-web-01 
+- srv-git-01 
+- srv-monitor-01 
 
 Routers 
+- rtr-edge-01 
 
-7 
+Clients 
+- cli-admin-01 
+- cli-dev-01 
 
-rtr-edge-01 Clients cli-admin-01 cli-dev-01 
-
-Future Kubernetes nodes k8s-master-01 k8s-worker-01 
+Future Kubernetes nodes 
+- k8s-master-01 
+- k8s-worker-01 
 
 Consistency is mandatory. 
 
 ## **10. DNS Architecture** 
 
-Internal DNS Zone 
+Internal DNS Zone: atlas.lab 
 
-atlas.lab 
+Examples 
 
-Examples srv-dns-01.atlas.lab 
-
-srv-web-01.atlas.lab 
-
-srv-ca-01.atlas.lab 
+- srv-dns-01.atlas.lab 
+- srv-web-01.atlas.lab 
+- srv-ca-01.atlas.lab 
 
 Reverse DNS will be implemented after forward DNS is operational. 
 
@@ -335,20 +295,19 @@ Quarter 1 begins with a minimal infrastructure.
 |srv-dns-01|DNS Server|Debian Stable|
 
 
-
-8 
-
 |Host|Purpose|Planned OS|
 |---|---|---|
 |cli-admin-01|Administrator Workstation|Ubuntu Desktop|
-
-
 
 Additional servers appear only when justified by business requirements. 
 
 Examples include: 
 
-• srv-ca-01 • srv-ldap-01 • srv-git-01 • srv-monitor-01 • srv-ci-01 
+- srv-ca-01
+- srv-ldap-01
+- srv-git-01
+- srv-monitor-01
+- srv-ci-01 
 
 ## **12. Operating System Strategy** 
 
@@ -368,19 +327,12 @@ Security is integrated into every Engineering Task.
 
 Core principles include: 
 
-Least Privilege 
-
-SSH Key Authentication 
-
-Host Firewalls 
-
-Service Isolation 
-
-Certificate-Based Encryption 
-
-9 
-
-Principle of Minimal Exposure 
+- Least Privilege 
+- SSH Key Authentication 
+- Host Firewalls 
+- Service Isolation 
+- Certificate-Based Encryption 
+- Principle of Minimal Exposure 
 
 Services should only expose the ports required for operation. 
 
@@ -388,21 +340,14 @@ Services should only expose the ports required for operation.
 
 Every infrastructure component requires: 
 
-Architecture Diagram 
-
-README 
-
-Configuration Notes 
-
-Verification Procedure 
-
-Operational Notes 
-
-Troubleshooting Guide 
-
-Runbook 
-
-Lessons Learned 
+- Architecture Diagram 
+- README 
+- Configuration Notes 
+- Verification Procedure 
+- Operational Notes 
+- Troubleshooting Guide 
+- Runbook 
+- Lessons Learned 
 
 No service is considered complete until documentation is finished. 
 
@@ -420,8 +365,6 @@ The primary repository contains:
 
 /runbooks 
 
-10 
-
 /diagrams 
 
 /scripts 
@@ -434,15 +377,11 @@ Future repositories may contain application code or automation projects, but the
 
 Infrastructure should be: 
 
-Predictable 
-
-Observable 
-
-Recoverable 
-
-Documented 
-
-Maintainable 
+- Predictable 
+- Observable 
+- Recoverable 
+- Documented 
+- Maintainable 
 
 Every Engineering Task must improve at least one of these qualities. 
 
@@ -460,37 +399,21 @@ Virtual machines remain available for future phases without requiring all system
 
 The architecture is intentionally prepared for future additions, including: 
 
-11 
-
-Internal PKI 
-
-LDAP 
-
-SSSD 
-
-PAM 
-
-Git Platform 
-
-Monitoring Stack 
-
-Container Platform 
-
-Configuration Management 
-
-CI/CD 
-
-VPN 
-
-Cloud Connectivity 
-
-Disaster Recovery 
-
-Monitoring Network 
-
-DMZ 
-
-Hybrid Cloud 
+- Internal PKI 
+- LDAP 
+- SSSD 
+- PAM 
+- Git Platform 
+- Monitoring Stack 
+- Container Platform 
+- Configuration Management 
+- CI/CD 
+- VPN 
+- Cloud Connectivity 
+- Disaster Recovery 
+- Monitoring Network 
+- DMZ 
+- Hybrid Cloud 
 
 No future service should require redesigning the existing architecture. 
 
@@ -512,25 +435,17 @@ This document is governed by the following rules:
 
 7. Engineering decisions must be justified by business requirements. 
 
-12 
-
 ## **20. Definition of Architectural Success** 
 
 The architecture is considered successful when it: 
 
-Supports business requirements. 
-
-Remains understandable. 
-
-Scales through incremental growth. 
-
-Can be rebuilt from documentation. 
-
-Allows safe experimentation. 
-
-Promotes sound engineering practices. 
-
-Prepares the learner for professional Linux infrastructure administration. 
+- Supports business requirements. 
+- Remains understandable. 
+- Scales through incremental growth. 
+- Can be rebuilt from documentation. 
+- Allows safe experimentation. 
+- Promotes sound engineering practices. 
+- Prepares the learner for professional Linux infrastructure administration. 
 
 ## **Architecture Vision** 
 
@@ -541,9 +456,6 @@ It represents a well-engineered, growing software company where every infrastruc
 The architecture is deliberately designed to teach not only how systems are built, but why they are built that way. 
 
 This document serves as the technical foundation upon which every future Engineering Task, Architecture Decision Record and infrastructure service will be based. 
-
-13 
-
 
 ## **Chapter 8B Change History**
 

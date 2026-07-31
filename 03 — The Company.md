@@ -32,24 +32,16 @@ Its engineering team consists primarily of Linux-based development environments.
 
 This type of business naturally requires many of the technologies used in modern infrastructure engineering. 
 
-1 
-
 Examples include: 
 
-- DNS • HTTPS 
-
+- DNS
+- HTTPS 
 - Linux servers 
-
 - Git 
-
 - CI/CD 
-
 - Monitoring 
-
 - Logging 
-
 - Authentication 
-
 - Containerization 
 
 Every technology introduced later in this project will have a realistic business justification. 
@@ -58,16 +50,14 @@ Every technology introduced later in this project will have a realistic business
 
 The project begins at a very early stage of the company's growth. 
 
-Employees: 
-
-Approximately 25 
+Employees: Approximately 25 
 
 Departments: 
 
-- Management • Software Development 
-
-- QA • Infrastructure 
-
+- Management
+- Software Development 
+- QA
+- Infrastructure 
 - Support 
 
 The learner is the company's first Infrastructure Engineer. 
@@ -83,17 +73,10 @@ At the beginning of the project, the company has relatively simple needs.
 Employees require: 
 
 - reliable Linux servers; 
-
-2 
-
 - internal name resolution; 
-
 - secure SSH access; 
-
 - file sharing; 
-
 - source code storage; 
-
 - basic web services. 
 
 No enterprise-scale infrastructure exists yet. 
@@ -107,15 +90,10 @@ Atlas follows a conservative engineering philosophy.
 The company values: 
 
 - reliability; 
-
 - simplicity; 
-
 - maintainability; 
-
 - documentation; 
-
 - security; 
-
 - incremental improvement. 
 
 The company intentionally avoids deploying technologies before they become necessary. 
@@ -126,31 +104,18 @@ At the beginning of the project the infrastructure is intentionally small.
 
 Core components include: 
 
-Infrastructure Network 
-
-Linux Servers 
-
-Primary DNS 
-
-Secondary DNS 
-
-Client Workstation 
-
-Internal Web Server 
-
-3 
-
-Router / Internet Access 
-
-No centralized authentication exists. 
-
-No certificate authority exists. 
-
-No monitoring exists. 
-
-No automation exists. 
-
-No CI/CD exists. 
+- Infrastructure Network 
+- Linux Servers 
+- Primary DNS 
+- Secondary DNS 
+- Client Workstation 
+- Internal Web Server 
+- Router / Internet Access 
+- No centralized authentication exists. 
+- No certificate authority exists. 
+- No monitoring exists. 
+- No automation exists. 
+- No CI/CD exists. 
 
 These capabilities will be introduced gradually. 
 
@@ -164,45 +129,54 @@ Examples include:
 
 The company launches more internal websites. 
 
-## ↓ 
+↓
 
 HTTPS becomes necessary. 
 
-## ↓ 
+↓
 
 Internal Certificate Authority is introduced. 
 
-Developers increase from 5 to 15. 
+--- 
+---
 
-## ↓ 
+Developers increase from 5 to 15.
+
+↓ 
 
 Managing local Linux accounts becomes inefficient. 
 
-## ↓ 
+↓ 
 
 LDAP is introduced. 
 
-4 
+---
+---
 
 The number of servers increases. 
 
-## ↓ 
+↓ 
 
 Manual configuration becomes repetitive. 
 
-## ↓ 
+↓ 
 
 Configuration management is introduced. 
 
+---
+---
+
 Application deployments become frequent. 
 
-## ↓ 
+↓ 
 
 Continuous Integration becomes valuable. 
 
-## ↓ 
+↓ 
 
 CI/CD is introduced. 
+
+---
 
 Every technology must solve an existing operational problem. 
 
@@ -226,7 +200,6 @@ Knowledge is shared.
 
 These values influence every architectural decision throughout the project. 
 
-5 
 
 ## **3.9 The Role of the Learner** 
 
@@ -237,17 +210,11 @@ The learner is acting as Atlas Software Solutions' Infrastructure Engineer.
 Responsibilities include: 
 
 - designing infrastructure; 
-
 - deploying services; 
-
 - troubleshooting incidents; 
-
 - documenting systems; 
-
 - improving reliability; 
-
 - reducing operational complexity; 
-
 - planning future growth. 
 
 The learner is expected to think like an engineer rather than simply execute instructions. 
@@ -259,13 +226,9 @@ The Technical Lead is responsible for mentoring rather than completing tasks.
 Responsibilities include: 
 
 - explaining engineering concepts; 
-
 - reviewing architectural decisions; 
-
 - asking challenging questions; 
-
 - encouraging systematic troubleshooting; 
-
 - introducing new technologies only when appropriate. 
 
 The Technical Lead should avoid providing complete solutions whenever independent reasoning is possible. 
@@ -278,21 +241,8 @@ Every chapter of this blueprint begins with a business requirement.
 
 Example: 
 
-- "We need secure communication." 
-
-6 
-
-not 
-
-"Today we study TLS." 
-
-Example: 
-
-"We need centralized authentication." 
-
-not 
-
-"Today we study LDAP." 
+- "We need secure communication." not "Today we study TLS." 
+- "We need centralized authentication." not "Today we study LDAP."
 
 The business problem defines the learning objective. 
 
@@ -305,13 +255,9 @@ The objective is not building the largest possible infrastructure.
 The objective is building an infrastructure that is: 
 
 - understandable; 
-
 - maintainable; 
-
 - secure; 
-
 - well documented; 
-
 - professionally designed. 
 
 By the end of the project, Atlas Software Solutions should resemble the infrastructure of a well-organized small-to-medium software company. 
@@ -325,6 +271,3 @@ Infrastructure should grow for the same reason businesses grow:
 Because new problems require new solutions. 
 
 Never because a technology is popular. 
-
-7 
-
