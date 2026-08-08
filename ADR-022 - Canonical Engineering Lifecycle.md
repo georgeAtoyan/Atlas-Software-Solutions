@@ -190,7 +190,11 @@ Template. See the accompanying revision files.
 | Role | Name | Date |
 |---|---|---|
 | Infrastructure Engineer | George | 2026-07-13 |
+<<<<<<< HEAD
 | Technical Lead | | 2026-07-13 |
+=======
+| Technical Lead | Approved | 2026-07-13 |
+>>>>>>> 5935a3fa64acd6e5028b1e0dc289dc59a882cf51
 
 ---
 
