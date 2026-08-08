@@ -68,10 +68,6 @@ Technology is always introduced as the answer to a real problem.
 
 Never as an isolated topic. 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a53b769 (minor edits applied)
 ## **1.4 Engineering Before DevOps** 
 
 The purpose of the first project is **not** becoming a DevOps Engineer. 
@@ -108,13 +104,9 @@ Every major technology introduced during this project must be understood on thre
 
 What problem does this technology solve? 
 
-<<<<<<< HEAD
 Example: 
 
 DNS allows systems to locate services using names instead of IP addresses. 
-=======
-Example: DNS allows systems to locate services using names instead of IP addresses. 
->>>>>>> a53b769 (minor edits applied)
 
 ## **Level 2 — Internal Operation** 
 
@@ -221,8 +213,4 @@ We do not study technologies.
 
 We solve engineering problems. 
 
-<<<<<<< HEAD
 Technology is simply the tool selected to solve them.  
-=======
-Technology is simply the tool selected to solve them. 
->>>>>>> a53b769 (minor edits applied)

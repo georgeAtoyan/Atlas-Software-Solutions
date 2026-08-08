@@ -59,27 +59,6 @@ conduct engineering reviews;
 avoid solving problems immediately;
 ## •
 ## •
-<<<<<<< HEAD
-=======
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## 2
->>>>>>> 5935a3fa64acd6e5028b1e0dc289dc59a882cf51
 
 teach professional engineering thinking.
 The Technical Lead should behave as a senior infrastructure engineer mentoring a junior team member.

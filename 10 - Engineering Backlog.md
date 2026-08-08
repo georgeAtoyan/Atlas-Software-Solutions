@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 5935a3fa64acd6e5028b1e0dc289dc59a882cf51
 ## Engineering Backlog
 ## Purpose
 The Engineering Backlog is the master implementation roadmap for the Atlas Software Solutions
@@ -18,7 +13,6 @@ and documented.
 ## Phase 1 — Linux Foundations
 ## Objective:
 Establish the core infrastructure required for all future engineering work.
-<<<<<<< HEAD
 
 Topics include:
 - VirtualBox
@@ -66,78 +60,10 @@ Topics include:
 
 ### Exit Criteria:
 Internal services communicate reliably using the infrastructure.
-=======
-Topics include:
-VirtualBox
-Linux installation
-## Filesystems
-Users and groups
-## SSH
-systemd
-Package management
-Basic networking
-Documentation standards
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## 1
-
-## Exit Criteria:
-The learner can confidently install, configure and administer Linux servers without step-by-step
-instructions.
-## Phase 2 — Core Networking
-## Objective:
-Build a routed internal network capable of supporting multiple infrastructure services.
-Topics include:
-## Router
-IP addressing
-Static routing
-## NAT
-Packet forwarding
-nftables/iptables
-DNS fundamentals
-TCP/IP troubleshooting
-## Exit Criteria:
-The learner understands packet flow throughout the infrastructure.
-## Phase 3 — Infrastructure Services
-## Objective:
-Deploy the essential services required by the company.
-Topics include:
-Primary DNS
-Secondary DNS
-Reverse DNS
-## DHCP
-## NTP
-Internal web services
-## Exit Criteria:
-Internal services communicate reliably using the infrastructure.
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## 2
->>>>>>> 5935a3fa64acd6e5028b1e0dc289dc59a882cf51
 
 ## Phase 4 — Identity & Access
 ## Objective:
 Introduce centralized authentication.
-<<<<<<< HEAD
 
 Topics include:
 - LDAP
@@ -239,136 +165,6 @@ Topics include:
 ### Exit Criteria:
 The learner demonstrates the knowledge, judgement and confidence expected of a professional Junior Linux System Administrator.
 
-=======
-Topics include:
-## LDAP
-## PAM
-## NSS
-## SSSD
-SSH authentication
-## Permissions
-## Exit Criteria:
-Identity management is centralized and understood.
-Phase 5 — Security & PKI
-## Objective:
-Build trust and secure communication.
-Topics include:
-Internal CA
-## TLS
-## Certificates
-## HTTPS
-SSH hardening
-Least privilege
-## Exit Criteria:
-Internal communication is encrypted and trust is centrally managed.
-## Phase 6 — Operations
-## Objective:
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## 3
-
-Operate infrastructure professionally.
-Topics include:
-## Monitoring
-## Logging
-## Backups
-## Recovery
-## Runbooks
-Incident response
-## Exit Criteria:
-Infrastructure can be monitored, maintained and recovered.
-## Phase 7 — Automation
-## Objective:
-Reduce repetitive operational work.
-Topics include:
-## Bash
-## Python
-## Git
-## Ansible
-Scheduled automation
-## Exit Criteria:
-Routine administrative tasks are automated without sacrificing understanding.
-## Phase 8 — Containers
-## Objective:
-Introduce application portability.
-Topics include:
-## Docker
-## Images
-## Registries
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## 4
-
-## Networks
-## Volumes
-## Compose
-## Exit Criteria:
-Applications are containerized and managed confidently.
-## Phase 9 — Cloud Integration
-## Objective:
-Extend the existing infrastructure into AWS.
-Topics include:
-## EC2
-## VPC
-## IAM
-## Security Groups
-## Route Tables
-Hybrid networking
-## Exit Criteria:
-Core infrastructure concepts are successfully applied in the cloud.
-## Phase 10 — Production Readiness
-## Objective:
-Prepare for a Junior Linux System Administrator role.
-Topics include:
-Architecture reviews
-Troubleshooting scenarios
-Mock incidents
-Technical interviews
-Documentation review
-Infrastructure improvements
-## Exit Criteria:
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## •
-## 5
-
-The learner demonstrates the knowledge, judgement and confidence expected of a professional Junior
-## Linux System Administrator.
->>>>>>> 5935a3fa64acd6e5028b1e0dc289dc59a882cf51
 ## Task Tracking States
 
 > **These are workflow tracking states, not lifecycle stages.** The Engineering Lifecycle is defined exclusively in **Chapter 5 (Engineering Workflow), Section 5.2** (ADR-022). Tracking states are coarse-grained progress labels; each maps to one or more canonical lifecycle stages as shown below. This section must never be cited as a lifecycle definition.
@@ -403,7 +199,6 @@ The former state "Architecture Review" is renamed **Design Review** and the form
 
 ## Task Registry
 Each task is recorded using the following fields:
-<<<<<<< HEAD
 | Field | Description |
 |---|---|
 | Task ID | Unique identifier |
@@ -467,88 +262,12 @@ The Technical Lead determines whether:
 
 The backlog reflects the current state of the infrastructure and the business.
 
-=======
-FieldDescription
-Task IDUnique identifier
-TitleEngineering Task name
-PhaseEngineering Phase
-PriorityHigh / Medium / Low
-DependenciesRequired prerequisite tasks
-Related ADRApplicable architecture decisions
-Nemeth ChaptersRequired reading
-Required VMsSystems required for execution
-DeliverablesDocumentation and implementation outputs
-StatusCurrent lifecycle stage
-## Initial Engineering Backlog
-IDTitlePhaseDepends On
-INF-001Build Administrative WorkstationPhase 1—
-INF-002Deploy Debian RouterPhase 1INF-001
-NET-001Configure Internal NetworksPhase 2INF-002
-NET-002Configure Routing & NATPhase 2NET-001
-NET-003Validate Packet FlowPhase 2NET-002
-NET-004Deploy Primary DNSPhase 3NET-003
-NET-005Deploy Reverse DNSPhase 3NET-004
-NET-006Deploy Secondary DNSPhase 3NET-005
-NET-007Implement DHCPPhase 3NET-006
-OPS-001Configure NTPPhase 3NET-007
-SEC-001Build Internal Certificate AuthorityPhase 5NET-006
-## 7
-
-IDTitlePhaseDepends On
-SEC-002Secure Internal Web Services with TLSPhase 5SEC-001
-INF-003Deploy LDAP ServerPhase 4NET-006
-INF-004Configure NSS, PAM and SSSDPhase 4INF-003
-OPS-002Deploy Monitoring StackPhase 6INF-004
-OPS-003Configure Centralized LoggingPhase 6OPS-002
-OPS-004Implement Backup StrategyPhase 6OPS-003
-AUT-001Automate Administrative Tasks with BashPhase 7OPS-004
-AUT-002Introduce Git for InfrastructurePhase 7AUT-001
-AUT-003Deploy AnsiblePhase 7AUT-002
-CNT-001Deploy DockerPhase 8AUT-003
-CNT-002Containerize Internal ServicesPhase 8CNT-001
-CLD-001Create AWS FoundationPhase 9CNT-002
-CLD-002Extend Infrastructure into AWSPhase 9CLD-001
-OPS-005Production Readiness AssessmentPhase 10CLD-002
-## Phase Completion Criteria
-A phase is complete only when:
-All Engineering Tasks are completed.
-Documentation is current.
-ADRs are updated.
-Architecture remains consistent.
-The Technical Lead approves progression.
-The learner can explain the rationale behind every major decision.
-Advancing without understanding is not permitted.
-## Backlog Maintenance
-The backlog is reviewed after every completed Engineering Task.
-## •
-## •
-## •
-## •
-## •
-## •
-## 8
-
-The Technical Lead determines whether:
-new tasks should be added;
-priorities should change;
-dependencies should be updated;
-new ADRs are required.
-The backlog reflects the current state of the infrastructure and the business.
->>>>>>> 5935a3fa64acd6e5028b1e0dc289dc59a882cf51
 ## Guiding Principle
 The Engineering Backlog is not a checklist to finish as quickly as possible.
 It is the structured development plan for both the Atlas Software Solutions infrastructure and the engineer
 responsible for designing, operating and improving it.
 Each completed task represents not only a technical implementation but also a measurable step toward
 becoming a professional Infrastructure Engineer.
-<<<<<<< HEAD
-=======
-## •
-## •
-## •
-## •
-## 9
->>>>>>> 5935a3fa64acd6e5028b1e0dc289dc59a882cf51
 
 ## Engineering Backlog Change History
 

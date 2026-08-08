@@ -1,7 +1,6 @@
 # ADR Register
 
 **Document ID:** ADR-REGISTER
-<<<<<<< HEAD
 
 **Version:** 1.1
 
@@ -9,11 +8,6 @@
 
 **Last Updated:** 2026-07-13
 
-=======
-**Version:** 1.1
-**Status:** Approved
-**Last Updated:** 2026-07-13
->>>>>>> 5935a3fa64acd6e5028b1e0dc289dc59a882cf51
 **Location (repository):** /adr/ADR-REGISTER.md
 
 ---
