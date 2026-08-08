@@ -1,4 +1,5 @@
 ## Engineering Backlog
+
 ## Purpose
 The Engineering Backlog is the master implementation roadmap for the Atlas Software Solutions
 infrastructure.
@@ -6,10 +7,12 @@ It defines every Engineering Task required to design, build, operate and evolve 
 Tasks are completed in dependency order rather than chronological order.
 Progression is based on demonstrated understanding and successful implementation—not on time.
 The backlog is a living engineering document and will evolve as the infrastructure grows.
+
 ## Engineering Phases
 The project is divided into engineering phases.
 A phase is complete only when all required Engineering Tasks have been successfully implemented, verified
 and documented.
+
 ## Phase 1 — Linux Foundations
 ## Objective:
 Establish the core infrastructure required for all future engineering work.
