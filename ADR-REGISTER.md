@@ -2,7 +2,7 @@
 
 **Document ID:** ADR-REGISTER
 
-**Version:** 1.1
+**Version:** 1.2
 
 **Status:** Approved
 
@@ -41,7 +41,7 @@ this Register.
 
 ## 3. Next Available Identifier
 
-> ## **ADR-024**
+> ## **ADR-025**
 
 (Update this value in the same commit that allocates it.)
 
@@ -72,6 +72,7 @@ this Register.
 | ADR-021 | Single Authoritative IP Address Allocation Policy (Ch. 8B §8) | Accepted | 2026-07-13 | STD-ADR-001 compliant | Supersedes ADR-005 |
 | ADR-022 | Canonical Engineering Lifecycle (Ch. 5 §5.2) | Accepted | 2026-07-13 | STD-ADR-001 compliant | — |
 | ADR-023 | Repository Access and Commit Authority | Accepted | 2026-07-27 | STD-ADR-001 compliant | NaN |
+| ADR-024 | VirtualBox Internal Network Naming Convention | Accepted | 2026-08-08 | STD-ADR-001 compliant | NaN
 
 ADR-001–ADR-020 reside in Chapter 8A — Foundational Architecture Decisions.
 ADR-021 onward reside as individual documents in the /adr repository
@@ -83,3 +84,4 @@ directory.
 |---|---|---|
 | 1.0 | 2026-07-13 | Initial Register: foundational ADR-001–020 recorded as grandfathered; ADR-021, ADR-022 recorded; next available identifier set to ADR-023. |
 | 1.1 | 2026-07-27 | ADR-023 recorded; next available identifier set to ADR-024. |
+| 1.2 | 2026-08-08 | ADR-024 recorder; next available identifier set to ADR-025. |
