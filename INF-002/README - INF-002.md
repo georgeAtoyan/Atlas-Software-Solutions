@@ -1,132 +1,118 @@
-## **README — cli-admin-01** 
+## **README — rtr-edge-01** 
 
-**Engineering Task:** INF-001 cli-admin-01
+**Engineering Task:** INF-002 rtr-edge-01
 
 **Status:** Approved
 
-**Version:** 1.0
+**Version:** 1.1
 
-**Last Updated:** 2026-07-16
+**Last Updated:** 2026-08-11
 
-**Verified by:** George
+**Author:** George
 
 ## 1. Purpose
-The company has no standardized administrative platform from which the infrastructure can be designed, deployed, documented, and maintained. The current system will play a role of a central administration platform from which the administrator will be able to manage infrastructure, access company resources, and manage documentation. The system will provide the capability of effectively managing the evolving Linux-based infrastructure. 
+The company needs a control network edge - the device that lets the internal segments exist and nodes in these segments reach the Internet.
 
 ## 2. Business Role
 
-- serving as the company's standardized engineering workstation;
-- providing the administrative environment for infrastructure management;
-- acting as the primary platform for documentation, architecture design, and configuration management;
-- supporting the deployment and maintenance of the Atlas infrastructure;
-- enabling future Engineering Tasks to be performed consistently.
+The foundation upon which the entire segmented network is build on; nothing downstream (Management LAN, future DNS, other segments) can exist without it.
 
 ## 3. Architectural Role
 
-Central engineering workstation from which the systems are administered and evolved.
+rtr-edge-01 is the edge router that sits between the VirtualBox NAT uplink and the internal segments, providing the Management LAN's gateway.
 
 Upstream dependencies:
-- Windows host
-- VirtualBox
-- internet connectivity through VirtualBox built-in NAT network
+- VirtualBox NAT (enp0s3 - internet uplink)
 
 Downstream dependencies:
-- None
+- Management LAN (192.168.10.0/24)
 
 Communication partners:
-- Windows host
 - Internet (through NAT)
 
 Infrastructure responsibilities:
-- Infrastructure administration
-- Documentation
-- Architecture design
-- Configuration editing
-- Engineering tooling
+- Provide Internet access point
 
 ## 4. Current Status
 
-This system is currently deployed as part of Phase 1. The current implementation uses VirtualBox NAT networking. Migration to the Management LAN will occur during Engineering Task NET-001.
+The router is operational as a gateway leg (192.168.10.1/24) but routing, forwarding, NAT, firewall are deferred to NET-002. Thus, internal hosts can't reach the Internet yet. And the cli-admin-01 migration is NET-001.
 
 ## 5. System Specifications
 
-- VM Name: VirtualBox INF-001 - cli-admin-01
-- Hostname: cli-admin-01
-- Operating System: Ubuntu Desktop
-- Version: 26.04 LTS
-- vCPU: 2
-- Memory: 4096 MB
-- Video Memory: 128 MB
-- Storage: 40 GB (dynamically allocated)
+- VM Name: rtr-edge-01
+- Hostname: rtr-edge-01
+- Operating System: Debian Stable
+- Version: 13.6
+- vCPU: 1
+- Memory: 1024 MB
+- Video Memory: 16 MB
+- Storage: 10 GB (dynamically allocated)
 - Virtualization Platform: Oracle VirtualBox
-- Firmware: UEFI
+- Firmware: BIOS
 - Installation Type: Minimal Installation
-- Disk Layout: LVM + LUKS
-- Network (Current): VirtualBox NAT
-- Network (Target): Management LAN (after INF-002/NET-001)
+- Disk Layout: LVM no encryption
+- Network (Current): NAT uplink + 'mgmt-lan' gateway leg
+- Network (Target): Three segments - Management LAN, Server LAN, Client LAN
 
 ## 6. Network Overview
 
 ## Current Network
 
-VirtualBox NAT
+VirtualBox NAT uplink (enp0s3) + 'mgmt-lan' gateway leg (enp0s8 static at 192.168.10.1/24)
 DHCP address assigned by VirtualBox.
 
 ## Target Architecture
 
 Management LAN
-Static IP:
-192.168.10.10
+Subnet:
+192.168.10.0/24
 
 Gateway:
 rtr-edge-01
+192.168.10.1
 
-DNS:
-srv-dns-01
+Server LAN:
+192.168.20.0/24
+
+Client LAN:
+192.168.30.0/24
 
 ## 7. Installed Software
 
-| Software | Purpose |
-|---|---|
-| VS Code  | Editing configurations and Markdown documentation |
-| Git | Maintain a dedicated Infrastructure Repository alongside separate repositories for future application projects. |
-| OpenSSH Client | Connect remotely to other infrastructure nodes |
-| draw.io, web-based via Firefox | Primary tool for building infrastructure diagrams |
+base Debian only, no additional packages - and notably no sshd (deferred)
 
 ## 8. Security Overview
 
-- During the installation process of Linux Ubuntu 26.04 LTS, the LUKS encryption was enabled to provide a full-disk encryption. However, it comes with costs: passphrase required at every boot; data is unrecoverable if the passphrase is lost. 
-- The root account is locked so all administrative action flows through one named user via sudo, which is auditable and revocable.
-- No printing requirements exists. cups.service & cups.socket are disabled and stopped to prevent an unneeded listener per minimal-exposure principle.
+- During the installation process of Debian Stable 13.6, the LUKS encryption was disabled as the router plays a role of the availability-critical gateway.
+- The root account is locked so all actions flow through one named user via sudo, which is auditable and revocable.
+- No listening services to minimize the attack surface
 
 ## 9. Dependencies
 
-- Internet
+- Internet access (via NAT uplink)
 - VirtualBox built-in DHCP
 
 ## 10. Related Documentation
 
-08A - Infrastructure Decision Record §ADR-004 (Sets the naming convention)
-08B - Infrastructure Architecture (Shows where cli-admin-01 fits into the overall infrastructure)
-ADR-021 - IP Address Allocation Authority (Documents the authoritative IP addressing policy)
-Runbook INF-001
-Verification Notes INF-001
-Lessons Learned INF-001
-Architecture Diagram
+- Engineering Task INF-002
+- ADR-024 - VirtualBox Internal Network Naming Convention
+- Runbook INF-002
+- Verification Notes INF-002
+- Lessons Learned INF-002
+- Architecture Diagram
+- Engineering Task NET-001
+- Engineering Task NET-002
 
-## 11. Future Improvements
-
-Migration to Management LAN
-
-## 12. Change History
+## 11. Change History
 
 | Version | Date | Description |
 |---|---|---|
-| 1.0 | 2026-07-16 | Operational |
+| 1.0 | 2026-08-11 | Initial version |
+| 1.1 | 2026-08-11 | Edited architectural role description, relabel values as Subnet/Network in &6, fixed spelling |
 
 ## Approval
 
 | Role | Name | Date |
 |---|---|---|
-| Infrastructure Engineer | George | 2026-07-16 |
-| Technical Lead | | 2026-07-16 |
+| Infrastructure Engineer | George | 2026-08-11 |
+| Technical Lead | | 2026-08-11 |
