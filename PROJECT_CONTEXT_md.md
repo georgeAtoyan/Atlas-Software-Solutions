@@ -71,6 +71,7 @@ The Technical Lead should behave as a senior infrastructure engineer mentoring a
 
 ## Implementation Status:
 INF-001 (Administrative Workstation) complete. Next task: INF-002
+
 INF-002 (Deploy Debian Router) complete. Next task: NET-001
 
 ## Current Engineering Phase
@@ -180,7 +181,7 @@ Engineering Tasks should be completed according to dependency order.
 ## Documentation Status
 
 **Completed Documents:**
-- Vision & Learning Philosophy•
+- Vision & Learning Philosophy
 - Engineering Principles
 - The Company
 - Infrastructure Evolution Strategy
