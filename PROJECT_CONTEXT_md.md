@@ -134,7 +134,7 @@ Multiple network segments.
 
 **Architecture Evolution:** Incremental
 
-These decisions are documented in the ADRs, ADR-001–ADR-024 (Chapter 8A). The authoritative index of all ADRs is the ADR Register (ADR-REGISTER.md).
+These decisions are documented in the ADRs, ADR-001–ADR-020 (Chapter 8A). The authoritative index of all ADRs is the ADR Register (ADR-REGISTER.md).
 
 ## Infrastructure Standards
 
@@ -266,6 +266,7 @@ engineering competencies expected from a Junior Linux System Administrator.
 **Technical Lead Guidance:** Established
 
 ## Infrastructure:
+First workstation operational (cli-admin-01); migration to Management LAN pending NET-001.
 Debian Router operational (rtr-edge-01); network layer pending NET-001.
 
 ## Current Project Status:
@@ -278,4 +279,4 @@ Engineering in progress; INF-002 closed.
 | 0.1 | July 2026 | Initial version |
 | 0.2 | 2026-07-13 | ADR references corrected per AUD-C-04 ("ADR-000"/"Infrastructure Decision Record" retired). Targeted correction only; broader content staleness (AUD-M-01) remains open under DOC-010. |
 | 0.3 | 2026-07-29 | Updated task status, phase, backlog, objectives and operational status to reflect formal closure of INF-001. ADR reference range updated for ADR-021-023. Broader staleness (AUD-M-01) remains open. |
-| 0.4 | 2026-08-13 | Updated task status, phase, backlog, objectives and operational status to reflect formal closure of INF-001. ADR reference range updated for ADR-021-024. Broader staleness (AUD-M-01) remains open.
+| 0.4 | 2026-08-13 | Updated task status, phase, backlog, objectives and operational status to reflect formal closure of INF-002. ADR reference range updated for ADR-021-024. Broader staleness (AUD-M-01) remains open. |
